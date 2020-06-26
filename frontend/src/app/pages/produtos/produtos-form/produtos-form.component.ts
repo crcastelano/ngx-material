@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProdutosGQL } from '../produtos.GQL';
 import Swal from 'sweetalert2';
-import { fkUnidadeMedida, datasource } from '../produtos-datasource';
 
 @Component({
   selector: "app-produtos-form",
@@ -53,15 +52,13 @@ export class ProdutosFormComponent implements OnInit {
   }
 
   private loadFK(): void {
-    this.fkUnidadeMedida = fkUnidadeMedida;
-
-    // this.produtosGQL.getAllUnidadeMedida(null).subscribe(response => {
-    //   this.fkUnidadeMedida = response.nodes;
-    // },
-    // );
+    this.produtosGQL.getAllUnidadeMedida(null).subscribe(response => {
+      this.fkUnidadeMedida = response.nodes;
+    },
+    );
   }
 
-  editJson(data) {
+  createForm(data) {
     this.form = this.formBuilder.group(
       {
         createdAt: [data.createdAt],
@@ -96,46 +93,42 @@ export class ProdutosFormComponent implements OnInit {
       this.operacao = 'Alteração';
       this.isLoadingResults = true;
 
+      const condition = {
+        id: this.idForm,
+      };
 
-      const result = datasource.find( prod => prod.id === this.idForm );
-      this.editJson(result);
+      this.produtosGQL.getAllProduto(condition).subscribe(response => {
+        const data = response.nodes[0];
 
-      // const condition = {
-      //   id: this.idForm,
-      // };
-
-      // this.produtosGQL.getAllProduto(condition).subscribe(response => {
-      //   const data = response.nodes[0];
-
-      //   this.form = this.formBuilder.group(
-      //     {
-      //       createdAt: [data.createdAt],
-      //       deletedAt: [data.deletedAt],
-      //       descricao: [data.descricao],
-      //       estoque: [data.estoque],
-      //       estoqueMaximo: [data.estoqueMaximo],
-      //       estoqueMinimo: [data.estoqueMinimo],
-      //       id: [data.id],
-      //       idLegado: [data.idLegado],
-      //       idUnidadeMedida: [ Number(data.idUnidadeMedida)],
-      //       nome: [data.nome, Validators.required],
-      //       pesoBruto: [data.pesoBruto],
-      //       pesoLiquido: [data.pesoLiquido],
-      //       precoCusto: [data.precoCusto],
-      //       precoPromocao: [data.precoPromocao],
-      //       precoVenda: [data.precoVenda],
-      //       updatedAt: [data.updatedAt],
-      //     },
-      //   );
-      //   this.isLoadingResults = false;
-      // }, (error) => {
-      //   this.isLoadingResults = false;
-      //   Swal.fire({
-      //     icon: 'error',
-      //     title: 'Erro na consulta dos produtos',
-      //     text: error.message,
-      //   });
-      // });
+        this.form = this.formBuilder.group(
+          {
+            createdAt: [data.createdAt],
+            deletedAt: [data.deletedAt],
+            descricao: [data.descricao],
+            estoque: [data.estoque],
+            estoqueMaximo: [data.estoqueMaximo],
+            estoqueMinimo: [data.estoqueMinimo],
+            id: [data.id],
+            idLegado: [data.idLegado],
+            idUnidadeMedida: [ Number(data.idUnidadeMedida)],
+            nome: [data.nome, Validators.required],
+            pesoBruto: [data.pesoBruto],
+            pesoLiquido: [data.pesoLiquido],
+            precoCusto: [data.precoCusto],
+            precoPromocao: [data.precoPromocao],
+            precoVenda: [data.precoVenda],
+            updatedAt: [data.updatedAt],
+          },
+        );
+        this.isLoadingResults = false;
+      }, (error) => {
+        this.isLoadingResults = false;
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro na consulta dos produtos',
+          text: error.message,
+        });
+      });
     }
   }
 

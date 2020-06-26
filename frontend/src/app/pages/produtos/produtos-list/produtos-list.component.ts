@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { ProdutosGQL } from '../produtos.GQL';
 import { LocalDataSource } from 'ng2-smart-table';
 import Swal from 'sweetalert2';
-import { datasource } from '../produtos-datasource';
 
 @Component({
   selector: 'app-produtos-list',
@@ -75,11 +74,10 @@ export class ProdutosListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.source.load( datasource );
-    // this.produtosGQL.getAllProduto(null).subscribe(response => {
-    //   this.source.load(response.nodes);
-    // },
-    // );
+    this.produtosGQL.getAllProduto(null).subscribe(response => {
+      this.source.load(response.nodes);
+    },
+    );
   }
 
   onAdd(): void {
