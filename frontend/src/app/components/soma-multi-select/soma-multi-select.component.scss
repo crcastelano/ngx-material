@@ -1,0 +1,16 @@
+label {
+  display: block;
+}
+:host /deep/ {
+  .ui-multiselect {
+    width: 100%;
+    padding: 3px;
+    border-radius: 0;
+
+    .ui-multiselect-label {
+      background: transparent;
+      padding: 6px;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+<form [formGroup]="form">
+  <nb-card>
+    <nb-card-header>
+      <label>{{ operacao }} - Produto: </label>
+      <input
+        nbInput
+        placeholder="Id"
+        shape="{{ inputShape }}"
+        formControlName="id"
+        disabled
+      />
+      <input
+        nbInput
+        placeholder="Id Legado"
+        shape="{{ inputShape }}"
+        formControlName="idLegado"
+        disabled
+      />
+    </nb-card-header>
+    <nb-card-body>
+      <div class="col-md soma-form">
+        <label>Unidade de Medida</label>
+        <l-select2
+          class="form-control"
+          [data]="fkUnidadeMedida"
+          [options]="{ placeholder: 'Selecione...' }"
+          formControlName="idUnidadeMedida"
+          required
+          name="idUnidadeMedida"
+        >
+        </l-select2>
+      </div>
+
+      <div class="col-lg soma-form">
+        <label>Nome </label>
+        <input
+          class="form-control"
+          nbInput
+          placeholder="Nome"
+          shape="{{ inputShape }}"
+          formControlName="nome"
+          fullWidth
+        />
+      </div>
+
+      <div class="col-lg soma-form">
+        <label>Descrição</label>
+        <input
+          class="form-control"
+          nbInput
+          placeholder="Descrição"
+          shape="{{ inputShape }}"
+          formControlName="descricao"
+          fullWidth
+        />
+      </div>
+
+      <div class="card-row-middle">
+        <div class="card-col-middle">
+          <nb-card class="nb-card-middle" accent="danger">
+            <!-- <nb-card-header>Estoque</nb-card-header> -->
+              <div class="col-lg soma-form">
+                <label>Estoque</label>
+                <input
+                  class="form-control"
+                  formControlName="estoque"
+                  placeholder="Estoque"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: '', thousands: '.', decimal: ',', precision: 2 }"
+                />
+              </div>
+
+              <div class="col-lg soma-form">
+                <label>Estoque Mínimo</label>
+                <input
+                  class="form-control"
+                  formControlName="estoqueMinimo"
+                  placeholder="Estoque Mínimo"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: '', thousands: '.', decimal: ',', precision: 2 }"
+                />
+              </div>
+
+              <div class="col-lg soma-form">
+                <label>Estoque Máximo</label>
+                <input
+                  class="form-control"
+                  formControlName="estoqueMaximo"
+                  placeholder="Estoque Máximo"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: '', thousands: '.', decimal: ',', precision: 2 }"
+                />
+              </div>
+          </nb-card>
+        </div>
+        <div class="card-col-middle">
+          <nb-card class="nb-card-middle" accent="info">
+            <!-- <nb-card-header>Preços</nb-card-header> -->
+              <div class="col-lg soma-form">
+                <label>Preço de Venda</label>
+                <input
+                  class="form-control"
+                  formControlName="precoVenda"
+                  placeholder="Preço (R$)"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', precision: 4 }"
+                />
+              </div>
+
+              <div class="col-lg soma-form">
+                <label>Preço Promoção</label>
+                <input
+                  class="form-control"
+                  formControlName="precoPromocao"
+                  placeholder="Preço Promoção (R$)"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', precision: 4 }"
+                />
+              </div>
+
+              <div class="col-lg soma-form">
+                <label>Preço Custo</label>
+                <input
+                  class="form-control"
+                  formControlName="precoCusto"
+                  placeholder="Preço Custo (R$)"
+                  shape="{{ inputShape }}"
+                  nbInput
+                  currencyMask
+                  fullWidth
+                  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', precision: 4 }"
+                />
+              </div>
+          </nb-card>
+        </div>
+
+        <div class="card-col-middle">
+          <nb-card class="nb-card-middle" accent="warning">
+            <!-- <nb-card-header>Pesos</nb-card-header> -->
+            <div class="col-lg soma-form">
+              <label>Peso Líquido</label>
+              <input
+                class="form-control"
+                formControlName="pesoLiquido"
+                placeholder="Peso Líquido"
+                shape="{{ inputShape }}"
+                nbInput
+                currencyMask
+                fullWidth
+                [options]="{ prefix: '', thousands: '.', decimal: ',', precision: 4 }"
+              />
+            </div>
+
+            <div class="col-lg soma-form">
+              <label>Peso Bruto</label>
+              <input
+                class="form-control"
+                formControlName="pesoBruto"
+                placeholder="Peso Bruto"
+                shape="{{ inputShape }}"
+                nbInput
+                currencyMask
+                fullWidth
+                [options]="{ prefix: '', thousands: '.', decimal: ',', precision: 4 }"
+              />
+            </div>
+          </nb-card>
+        </div>
+      </div>
+
+      <div class="col-md soma-form">
+        <label>Data de Cadastro</label>
+        <soma-calendar
+          [form]="form"
+          parentControlName="createdAt"
+          monthNavigator="true"
+          yearNavigator="true"
+          [formatDateWithTime]="true"
+          showTime="showTime"
+          [yearRange]="'1900:2020'"
+          styleClass="col-12"
+          inputStyleClass="form-control"
+          inputId="createdAt"
+          placeholder="Data Cadastro"
+          hourFormat="24"
+        >
+        </soma-calendar>
+      </div>
+
+    </nb-card-body>
+    <nb-card-footer>
+      <button
+        nbButton
+        outline
+        status="primary"
+        (click)="onSubmit()"
+        style="width: 10em; margin-right: 20px;"
+      >
+        <nb-icon icon="save-outline"></nb-icon>Salvar
+      </button>
+      <button
+        nbButton
+        outline
+        status="danger"
+        (click)="cancel()"
+        style="width: 10em; margin-right: 20px;"
+      >
+        <nb-icon icon="close-outline"></nb-icon>Cancelar
+      </button>
+    </nb-card-footer>
+  </nb-card>
+</form>

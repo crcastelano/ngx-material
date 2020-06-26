@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+
+.input-example {
+  display: block;
+  margin-top: 1rem;
+
+  label, mat-radio-button {
+    margin-right: 1rem;
+  }
+
+  textarea {
+    min-height: 3rem;
+  }
+}
+
+.soma-form {
+  padding-bottom: 10px;
+}
+
+.calendar-pad {
+  margin-left: -15px;
+}
+
+// :host {
+//   display: block;
+//   max-height: 25rem;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// }
+
+.card-row-middle {
+  display: flex;
+  margin: 0 -0.5rem;
+  flex-flow: row nowrap;
+  margin-top: 5px;
+}
+
+.card-col-middle {
+  flex: 1 0 calc(33% - 1rem);
+  margin: 0 0.5rem;
+}
+
+.nb-card-middle {
+//  min-width: 10rem;
+  margin: 5%
+}

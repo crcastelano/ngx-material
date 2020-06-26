@@ -1,0 +1,243 @@
+<div class="content-page">
+  <nb-card>
+    <nb-card-header>
+      Filtros
+    </nb-card-header>
+    <nb-card-body>
+      <form
+        [formGroup]="form"
+        (ngSubmit)="dataTable.reset(); search(form.value)"
+      >
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="nome">Nome</label>
+              <input
+                id="nome"
+                placeholder="Nome"
+                class="form-control"
+                formControlName="nome"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="cpf">CPF</label>
+              <input
+                id="cpf"
+                placeholder="CPF"
+                class="form-control"
+                formControlName="cpf"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="rg">RG</label>
+              <input
+                id="rg"
+                placeholder="RG"
+                class="form-control"
+                formControlName="rg"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="sexo">Sexo</label>
+              <select formControlName="sexo" class="form-control">
+                <option [ngValue]="null">Selecione</option>
+                <option [ngValue]="'M'">Masculino</option>
+                <option [ngValue]="'F'">Feminino</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="email">E-mail</label>
+              <input
+                id="email"
+                placeholder="E-mail"
+                class="form-control"
+                formControlName="email"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="data_cadastro_inicio"
+                >Data de cadastro inicial</label
+              >
+              <soma-calendar
+                [form]="form"
+                parentControlName="data_cadastro_inicio"
+                monthNavigator="true"
+                yearNavigator="true"
+                yearRange="1990:2030"
+                styleClass="col-12"
+                inputStyleClass="form-control"
+                inputId="data_cadastro_inicio"
+                placeholder="Cadastrado a partir de"
+              >
+              </soma-calendar>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="data_cadastro_final"
+                >Data de cadastro final
+              </label>
+              <soma-calendar
+                [form]="form"
+                parentControlName="data_cadastro_final"
+                monthNavigator="true"
+                yearNavigator="true"
+                yearRange="1990:2030"
+                styleClass="col-12"
+                inputStyleClass="form-control"
+                inputId="data_cadastro_final"
+                placeholder="Cadastrado até"
+              >
+              </soma-calendar>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 pull-right text-right">
+            <div class="form-group">
+              <button
+                (click)="dataTable.reset(); clearFilters()"
+                class="btn btn-default btn-with-icon"
+                type="reset"
+              >
+                <i class="ion-close"></i> Limpar
+              </button>
+              <button
+                class="btn btn-primary btn-with-icon"
+                type="submit"
+                style="margin-left: 5px;"
+                [disabled]="form.invalid"
+              >
+                <i class="ion-search white-color"></i> Buscar
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </nb-card-body>
+  </nb-card>
+
+  <nb-card>
+    <nb-card-header>
+      <div class="row">
+        <div class="col-lg-3">
+          <h6 style="line-height: 2.5rem;">
+            INTERESSADOS {{ totalRecords ? ": " + totalRecords : "" }}
+          </h6>
+        </div>
+      </div>
+    </nb-card-header>
+    <nb-card-body>
+      <p-table
+        #dataTable
+        [value]="collection"
+        selectionMode="single"
+        [rows]="dataTableConfig.rowsPerPage"
+        [rowsPerPageOptions]="dataTableConfig.rowsPerPageOptions"
+        [paginator]="true"
+        [pageLinks]="dataTableConfig.maxPageLinks"
+        [loading]="isLoading"
+        [responsive]="true"
+        [rowHover]="true"
+        [lazy]="true"
+        [totalRecords]="totalRecords"
+        [first]="dataTableConfig.firstRow"
+        (onSort)="sortColumn($event)"
+        (onPage)="goToPage($event)"
+        [metaKeySelection]="false"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr class="text-center">
+            <th [pSortableColumn]="'nome'">
+              Nome<p-sortIcon [field]="'nome'"></p-sortIcon>
+            </th>
+
+            <th style="width: 12%" [pSortableColumn]="'cpf'">
+              CPF<p-sortIcon [field]="'cpf'"></p-sortIcon>
+            </th>
+
+            <th style="width: 10%" [pSortableColumn]="'rg'">
+              RG<p-sortIcon [field]="'rg'"></p-sortIcon>
+            </th>
+
+            <th style="width: 9%" [pSortableColumn]="'sexo'">
+              Sexo<p-sortIcon [field]="'sexo'"></p-sortIcon>
+            </th>
+
+            <th [pSortableColumn]="'email'">
+              E-mail<p-sortIcon [field]="'email'"></p-sortIcon>
+            </th>
+
+            <th style="width: 11%" [pSortableColumn]="'data_cadastro'">
+              Cadastro<p-sortIcon [field]="'data_cadastro'"></p-sortIcon>
+            </th>
+
+            <th style="width: 14%">Ações</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData" class="text-center">
+            <td>{{ rowData.nome }}</td>
+            <td>{{ rowData.cpf | mask: "000.000.000-00" }}</td>
+            <td>{{ rowData.rg | mask: "00.000.000-0" }}</td>
+            <td *ngFor="let option of sexoOptions | filter: rowData.sexo">
+              {{ option.value }}
+            </td>
+            <td>{{ rowData.email }}</td>
+            <td>{{ rowData.data_cadastro | date: "dd/MM/y" }}</td>
+            <td>
+              <button
+                id="view-button"
+                class="btn btn-o-contrast btn-icon"
+                title="Visualizar"
+                routerLink="/pages/interessado/{{ rowData.id }}/view"
+              >
+                <i class="far fa-eye"></i>
+              </button>
+              <button
+                id="delete-button"
+                class="btn btn-o-danger btn-icon"
+                title="Excluir"
+                (click)="excluir(rowData)"
+              >
+                <i class="ion-trash-a"></i>
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <ng-container>
+            <tr>
+              <td [attr.colspan]="7">
+                {{ dataTableConfig.emptyMessage }}
+              </td>
+            </tr>
+          </ng-container>
+        </ng-template>
+      </p-table>
+    </nb-card-body>
+  </nb-card>
+</div>

@@ -1,0 +1,39 @@
+<nb-card>
+  <nb-card-body>
+
+    <nb-actions size="medium" fullWidth="false">
+      <nb-action icon="plus-outline" (click)="onAdd()"></nb-action>
+      <nb-action icon="printer-outline"></nb-action>
+      <nb-action icon="download-outline" (click)="exportAsXLSX()" badgeText="xls" badgePosition="top right" badgeStatus="info"></nb-action>
+      <nb-action icon="download-outline" badgeText="pdf" badgePosition="top right" badgeStatus="info"></nb-action>
+      <nb-action icon="download-outline" badgeText="csv" badgePosition="top right" badgeStatus="info"></nb-action>
+    </nb-actions>
+    <!-- <button nbButton outline status="primary" (click)="add()"><nb-icon icon="plus-outline"></nb-icon>Adicionar</button>
+    <button nbButton outline status="primary" (click)="exporter.exportTable('xlsx', {fileName:'Tabela_Produtos', sheet: 'Planilha1', Props: {Author: 'Sistema'}})">Excel</button>
+    <button nbButton outline status="primary" (click)="exporter.exportTable('csv')"><nb-icon>picture_as_pdf</nb-icon>Exportar CSV</button>
+    <button nbButton outline status="primary" (click)="exporter.exportTable('json')"><nb-icon>picture_as_pdf</nb-icon>Exportar Json</button>
+    <button nbButton outline status="primary" (click)="exporter.exportTable('txt')"><nb-icon>print_box</nb-icon>Exportar TXT</button>
+    <button nbButton outline status="primary" (click)="exporter.exportTable('txt')"><nb-icon>print_box</nb-icon>Imprimir</button> -->
+
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Produtos
+    <!-- </mat-toolbar> -->
+    <!-- <router-outlet></router-outlet> -->
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (edit)="onEdit($event)"
+      (create)="onAdd()"
+      (delete)="onDelete($event)"
+      (custom)="onDetail($event)"
+    >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

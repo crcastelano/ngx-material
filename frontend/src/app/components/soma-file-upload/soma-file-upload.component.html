@@ -1,0 +1,39 @@
+<p-fileUpload
+  [accept]="filesTypesAccepted"
+  [maxFileSize]="maxFileSize"
+  [showCancelButton]="false"
+  [showUploadButton]="showUploadButton"
+  [chooseLabel]="chooseLabel"
+  [uploadLabel]="uploadLabel"
+  invalidFileSizeMessageSummary="{0}: Tamanho do arquivo inválido,"
+  invalidFileSizeMessageDetail="tamanho máximo de arquivo é {0}."
+  invalidFileTypeMessageSummary="{0}: Tipo do arquivo inválido,"
+  invalidFileTypeMessageDetail="tipos de arquivos permitidos: {0}."
+  [customUpload]="true"
+  (uploadHandler)="showUploadButton = false; uploadHandler($event)"
+  (onRemove)="isEmpty = true; onRemoveFile(0)"
+  (onSelect)="isEmpty = false; onSelectFile($event)">
+    
+  <ng-template pTemplate="toolbar">
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div>
+      <div *ngIf="title" class="mb-2 title">
+        {{ title }}
+        <span class="alert alert-warning pull-right lessAlert" *ngIf="required">
+          Obrigatório
+        </span>
+      </div>
+      <div *ngIf="arquivoPadrao" class="arquivo-padrao">
+        Já existe um <a class="padrao" (click)="visualizar()">arquivo padrão</a> para esse documento, deseja incluí-lo? <a (click)="vincularEvent.emit(arquivoPadrao)"><a class="sim">SIM</a></a>
+      </div>
+    </div>
+    <div>
+      <div class="border-upload" *ngIf="isEmpty">
+        <img src="/assets/img/ico-upload.png" alt="Upload de arquivos" class="icon-upload" />
+        <p class="text-center">Arraste e solte o arquivo aqui <span>Ou adicione pelo botão ao lado</span></p>
+      </div>
+      <p-progressBar *ngIf="!isEmpty" [value]="uploadProgress"></p-progressBar>
+    </div>
+  </ng-template>
+</p-fileUpload>

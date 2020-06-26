@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label [for]="parentControlName">{{ required ? '* ' : ''}}{{ label }}</label>
+  <select [formControl]="form.get(parentControlName)" class="form-control" [id]="parentControlName">
+    <option [ngValue]="null">Selecione</option>
+    <option *ngFor="let row of data" [ngValue]="row[columnToEmit]">{{ row[columnToShow] }}</option>
+  </select>
+</div>

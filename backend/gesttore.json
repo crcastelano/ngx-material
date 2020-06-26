@@ -1,0 +1,5845 @@
+"""
+A signed eight-byte integer. The upper big integer values are greater than the
+max value for a JavaScript number. Therefore all big integers will be output as
+strings and not numbers.
+"""
+scalar BigInt
+
+"""All input for the create `FailedJob` mutation."""
+input CreateFailedJobInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `FailedJob` to be created by this mutation."""
+  failedJob: FailedJobInput!
+}
+
+"""The output of our create `FailedJob` mutation."""
+type CreateFailedJobPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `FailedJob` that was created by this mutation."""
+  failedJob: FailedJob
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `FailedJob`. May be used by Relay 1."""
+  failedJobEdge(
+    """The method to use when ordering `FailedJob`."""
+    orderBy: [FailedJobsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): FailedJobsEdge
+}
+
+"""All input for the create `GrupoProduto` mutation."""
+input CreateGrupoProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `GrupoProduto` to be created by this mutation."""
+  grupoProduto: GrupoProdutoInput!
+}
+
+"""The output of our create `GrupoProduto` mutation."""
+type CreateGrupoProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoProduto` that was created by this mutation."""
+  grupoProduto: GrupoProduto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoProduto`. May be used by Relay 1."""
+  grupoProdutoEdge(
+    """The method to use when ordering `GrupoProduto`."""
+    orderBy: [GrupoProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoProdutosEdge
+}
+
+"""All input for the create `GrupoUsuario` mutation."""
+input CreateGrupoUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuario` to be created by this mutation."""
+  grupoUsuario: GrupoUsuarioInput!
+}
+
+"""The output of our create `GrupoUsuario` mutation."""
+type CreateGrupoUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuario` that was created by this mutation."""
+  grupoUsuario: GrupoUsuario
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoUsuario`. May be used by Relay 1."""
+  grupoUsuarioEdge(
+    """The method to use when ordering `GrupoUsuario`."""
+    orderBy: [GrupoUsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuariosEdge
+}
+
+"""All input for the create `GrupoUsuarioPermissao` mutation."""
+input CreateGrupoUsuarioPermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuarioPermissao` to be created by this mutation."""
+  grupoUsuarioPermissao: GrupoUsuarioPermissaoInput!
+}
+
+"""The output of our create `GrupoUsuarioPermissao` mutation."""
+type CreateGrupoUsuarioPermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuarioPermissao` that was created by this mutation."""
+  grupoUsuarioPermissao: GrupoUsuarioPermissao
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """
+  Reads a single `GrupoUsuario` that is related to this `GrupoUsuarioPermissao`.
+  """
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """
+  Reads a single `Permissao` that is related to this `GrupoUsuarioPermissao`.
+  """
+  permissaoByIdPermissao: Permissao
+
+  """An edge for our `GrupoUsuarioPermissao`. May be used by Relay 1."""
+  grupoUsuarioPermissaoEdge(
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuarioPermissaosEdge
+}
+
+"""All input for the create `Migration` mutation."""
+input CreateMigrationInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Migration` to be created by this mutation."""
+  migration: MigrationInput!
+}
+
+"""The output of our create `Migration` mutation."""
+type CreateMigrationPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Migration` that was created by this mutation."""
+  migration: Migration
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Migration`. May be used by Relay 1."""
+  migrationEdge(
+    """The method to use when ordering `Migration`."""
+    orderBy: [MigrationsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): MigrationsEdge
+}
+
+"""All input for the create `PasswordReset` mutation."""
+input CreatePasswordResetInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `PasswordReset` to be created by this mutation."""
+  passwordReset: PasswordResetInput!
+}
+
+"""The output of our create `PasswordReset` mutation."""
+type CreatePasswordResetPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `PasswordReset` that was created by this mutation."""
+  passwordReset: PasswordReset
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `PasswordReset`. May be used by Relay 1."""
+  passwordResetEdge(
+    """The method to use when ordering `PasswordReset`."""
+    orderBy: [PasswordResetsOrderBy!] = [NATURAL]
+  ): PasswordResetsEdge
+}
+
+"""All input for the create `Permissao` mutation."""
+input CreatePermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Permissao` to be created by this mutation."""
+  permissao: PermissaoInput!
+}
+
+"""The output of our create `Permissao` mutation."""
+type CreatePermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Permissao` that was created by this mutation."""
+  permissao: Permissao
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Permissao`. May be used by Relay 1."""
+  permissaoEdge(
+    """The method to use when ordering `Permissao`."""
+    orderBy: [PermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PermissaosEdge
+}
+
+"""All input for the create `Pessoa` mutation."""
+input CreatePessoaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Pessoa` to be created by this mutation."""
+  pessoa: PessoaInput!
+}
+
+"""The output of our create `Pessoa` mutation."""
+type CreatePessoaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Pessoa` that was created by this mutation."""
+  pessoa: Pessoa
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Pessoa`. May be used by Relay 1."""
+  pessoaEdge(
+    """The method to use when ordering `Pessoa`."""
+    orderBy: [PessoasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PessoasEdge
+}
+
+"""All input for the create `ProdutoGrupo` mutation."""
+input CreateProdutoGrupoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `ProdutoGrupo` to be created by this mutation."""
+  produtoGrupo: ProdutoGrupoInput!
+}
+
+"""The output of our create `ProdutoGrupo` mutation."""
+type CreateProdutoGrupoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ProdutoGrupo` that was created by this mutation."""
+  produtoGrupo: ProdutoGrupo
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Produto` that is related to this `ProdutoGrupo`."""
+  produtoByIdProduto: Produto
+
+  """Reads a single `GrupoProduto` that is related to this `ProdutoGrupo`."""
+  grupoProdutoByIdGrupoProduto: GrupoProduto
+
+  """An edge for our `ProdutoGrupo`. May be used by Relay 1."""
+  produtoGrupoEdge(
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutoGruposEdge
+}
+
+"""All input for the create `Produto` mutation."""
+input CreateProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Produto` to be created by this mutation."""
+  produto: ProdutoInput!
+}
+
+"""The output of our create `Produto` mutation."""
+type CreateProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Produto` that was created by this mutation."""
+  produto: Produto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `UnidadeMedida` that is related to this `Produto`."""
+  unidadeMedidaByIdUnidadeMedida: UnidadeMedida
+
+  """An edge for our `Produto`. May be used by Relay 1."""
+  produtoEdge(
+    """The method to use when ordering `Produto`."""
+    orderBy: [ProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutosEdge
+}
+
+"""All input for the create `TipoMovimento` mutation."""
+input CreateTipoMovimentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `TipoMovimento` to be created by this mutation."""
+  tipoMovimento: TipoMovimentoInput!
+}
+
+"""The output of our create `TipoMovimento` mutation."""
+type CreateTipoMovimentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `TipoMovimento` that was created by this mutation."""
+  tipoMovimento: TipoMovimento
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `TipoMovimento`. May be used by Relay 1."""
+  tipoMovimentoEdge(
+    """The method to use when ordering `TipoMovimento`."""
+    orderBy: [TipoMovimentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): TipoMovimentosEdge
+}
+
+"""All input for the create `UnidadeMedida` mutation."""
+input CreateUnidadeMedidaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `UnidadeMedida` to be created by this mutation."""
+  unidadeMedida: UnidadeMedidaInput!
+}
+
+"""The output of our create `UnidadeMedida` mutation."""
+type CreateUnidadeMedidaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `UnidadeMedida` that was created by this mutation."""
+  unidadeMedida: UnidadeMedida
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `UnidadeMedida`. May be used by Relay 1."""
+  unidadeMedidaEdge(
+    """The method to use when ordering `UnidadeMedida`."""
+    orderBy: [UnidadeMedidasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UnidadeMedidasEdge
+}
+
+"""All input for the create `Usuario` mutation."""
+input CreateUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Usuario` to be created by this mutation."""
+  usuario: UsuarioInput!
+}
+
+"""The output of our create `Usuario` mutation."""
+type CreateUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Usuario` that was created by this mutation."""
+  usuario: Usuario
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `GrupoUsuario` that is related to this `Usuario`."""
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """An edge for our `Usuario`. May be used by Relay 1."""
+  usuarioEdge(
+    """The method to use when ordering `Usuario`."""
+    orderBy: [UsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UsuariosEdge
+}
+
+"""All input for the create `VendaFormapagamento` mutation."""
+input CreateVendaFormapagamentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `VendaFormapagamento` to be created by this mutation."""
+  vendaFormapagamento: VendaFormapagamentoInput!
+}
+
+"""The output of our create `VendaFormapagamento` mutation."""
+type CreateVendaFormapagamentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaFormapagamento` that was created by this mutation."""
+  vendaFormapagamento: VendaFormapagamento
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `VendaFormapagamento`. May be used by Relay 1."""
+  vendaFormapagamentoEdge(
+    """The method to use when ordering `VendaFormapagamento`."""
+    orderBy: [VendaFormapagamentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaFormapagamentosEdge
+}
+
+"""All input for the create `Venda` mutation."""
+input CreateVendaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `Venda` to be created by this mutation."""
+  venda: VendaInput!
+}
+
+"""The output of our create `Venda` mutation."""
+type CreateVendaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Venda` that was created by this mutation."""
+  venda: Venda
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Pessoa` that is related to this `Venda`."""
+  pessoaByIdCliente: Pessoa
+
+  """Reads a single `Usuario` that is related to this `Venda`."""
+  usuarioByIdUsuario: Usuario
+
+  """Reads a single `TipoMovimento` that is related to this `Venda`."""
+  tipoMovimentoByIdTipoMovimento: TipoMovimento
+
+  """An edge for our `Venda`. May be used by Relay 1."""
+  vendaEdge(
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendasEdge
+}
+
+"""All input for the create `VendaProduto` mutation."""
+input CreateVendaProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """The `VendaProduto` to be created by this mutation."""
+  vendaProduto: VendaProdutoInput!
+}
+
+"""The output of our create `VendaProduto` mutation."""
+type CreateVendaProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaProduto` that was created by this mutation."""
+  vendaProduto: VendaProduto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Venda` that is related to this `VendaProduto`."""
+  vendaByIdVenda: Venda
+
+  """Reads a single `Produto` that is related to this `VendaProduto`."""
+  produtoByIdProduto: Produto
+
+  """An edge for our `VendaProduto`. May be used by Relay 1."""
+  vendaProdutoEdge(
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaProdutosEdge
+}
+
+"""A location in a connection that can be used for resuming pagination."""
+scalar Cursor
+
+"""The day, does not include a time."""
+scalar Date
+
+"""
+A point in time as described by the [ISO
+8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.
+"""
+scalar Datetime
+
+"""All input for the `deleteFailedJobById` mutation."""
+input DeleteFailedJobByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: BigInt!
+}
+
+"""All input for the `deleteFailedJob` mutation."""
+input DeleteFailedJobInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `FailedJob` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `FailedJob` mutation."""
+type DeleteFailedJobPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `FailedJob` that was deleted by this mutation."""
+  failedJob: FailedJob
+  deletedFailedJobId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `FailedJob`. May be used by Relay 1."""
+  failedJobEdge(
+    """The method to use when ordering `FailedJob`."""
+    orderBy: [FailedJobsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): FailedJobsEdge
+}
+
+"""All input for the `deleteGrupoProdutoById` mutation."""
+input DeleteGrupoProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteGrupoProduto` mutation."""
+input DeleteGrupoProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoProduto` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `GrupoProduto` mutation."""
+type DeleteGrupoProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoProduto` that was deleted by this mutation."""
+  grupoProduto: GrupoProduto
+  deletedGrupoProdutoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoProduto`. May be used by Relay 1."""
+  grupoProdutoEdge(
+    """The method to use when ordering `GrupoProduto`."""
+    orderBy: [GrupoProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoProdutosEdge
+}
+
+"""All input for the `deleteGrupoUsuarioById` mutation."""
+input DeleteGrupoUsuarioByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteGrupoUsuario` mutation."""
+input DeleteGrupoUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoUsuario` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `GrupoUsuario` mutation."""
+type DeleteGrupoUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuario` that was deleted by this mutation."""
+  grupoUsuario: GrupoUsuario
+  deletedGrupoUsuarioId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoUsuario`. May be used by Relay 1."""
+  grupoUsuarioEdge(
+    """The method to use when ordering `GrupoUsuario`."""
+    orderBy: [GrupoUsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuariosEdge
+}
+
+"""All input for the `deleteGrupoUsuarioPermissaoById` mutation."""
+input DeleteGrupoUsuarioPermissaoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteGrupoUsuarioPermissao` mutation."""
+input DeleteGrupoUsuarioPermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoUsuarioPermissao` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `GrupoUsuarioPermissao` mutation."""
+type DeleteGrupoUsuarioPermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuarioPermissao` that was deleted by this mutation."""
+  grupoUsuarioPermissao: GrupoUsuarioPermissao
+  deletedGrupoUsuarioPermissaoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """
+  Reads a single `GrupoUsuario` that is related to this `GrupoUsuarioPermissao`.
+  """
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """
+  Reads a single `Permissao` that is related to this `GrupoUsuarioPermissao`.
+  """
+  permissaoByIdPermissao: Permissao
+
+  """An edge for our `GrupoUsuarioPermissao`. May be used by Relay 1."""
+  grupoUsuarioPermissaoEdge(
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuarioPermissaosEdge
+}
+
+"""All input for the `deleteMigrationById` mutation."""
+input DeleteMigrationByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteMigration` mutation."""
+input DeleteMigrationInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Migration` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Migration` mutation."""
+type DeleteMigrationPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Migration` that was deleted by this mutation."""
+  migration: Migration
+  deletedMigrationId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Migration`. May be used by Relay 1."""
+  migrationEdge(
+    """The method to use when ordering `Migration`."""
+    orderBy: [MigrationsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): MigrationsEdge
+}
+
+"""All input for the `deletePermissaoById` mutation."""
+input DeletePermissaoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deletePermissao` mutation."""
+input DeletePermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Permissao` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Permissao` mutation."""
+type DeletePermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Permissao` that was deleted by this mutation."""
+  permissao: Permissao
+  deletedPermissaoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Permissao`. May be used by Relay 1."""
+  permissaoEdge(
+    """The method to use when ordering `Permissao`."""
+    orderBy: [PermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PermissaosEdge
+}
+
+"""All input for the `deletePessoaById` mutation."""
+input DeletePessoaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deletePessoa` mutation."""
+input DeletePessoaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Pessoa` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Pessoa` mutation."""
+type DeletePessoaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Pessoa` that was deleted by this mutation."""
+  pessoa: Pessoa
+  deletedPessoaId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Pessoa`. May be used by Relay 1."""
+  pessoaEdge(
+    """The method to use when ordering `Pessoa`."""
+    orderBy: [PessoasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PessoasEdge
+}
+
+"""All input for the `deleteProdutoById` mutation."""
+input DeleteProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteProdutoGrupoById` mutation."""
+input DeleteProdutoGrupoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteProdutoGrupo` mutation."""
+input DeleteProdutoGrupoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `ProdutoGrupo` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `ProdutoGrupo` mutation."""
+type DeleteProdutoGrupoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ProdutoGrupo` that was deleted by this mutation."""
+  produtoGrupo: ProdutoGrupo
+  deletedProdutoGrupoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Produto` that is related to this `ProdutoGrupo`."""
+  produtoByIdProduto: Produto
+
+  """Reads a single `GrupoProduto` that is related to this `ProdutoGrupo`."""
+  grupoProdutoByIdGrupoProduto: GrupoProduto
+
+  """An edge for our `ProdutoGrupo`. May be used by Relay 1."""
+  produtoGrupoEdge(
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutoGruposEdge
+}
+
+"""All input for the `deleteProduto` mutation."""
+input DeleteProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Produto` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Produto` mutation."""
+type DeleteProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Produto` that was deleted by this mutation."""
+  produto: Produto
+  deletedProdutoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `UnidadeMedida` that is related to this `Produto`."""
+  unidadeMedidaByIdUnidadeMedida: UnidadeMedida
+
+  """An edge for our `Produto`. May be used by Relay 1."""
+  produtoEdge(
+    """The method to use when ordering `Produto`."""
+    orderBy: [ProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutosEdge
+}
+
+"""All input for the `deleteTipoMovimentoById` mutation."""
+input DeleteTipoMovimentoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteTipoMovimento` mutation."""
+input DeleteTipoMovimentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `TipoMovimento` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `TipoMovimento` mutation."""
+type DeleteTipoMovimentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `TipoMovimento` that was deleted by this mutation."""
+  tipoMovimento: TipoMovimento
+  deletedTipoMovimentoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `TipoMovimento`. May be used by Relay 1."""
+  tipoMovimentoEdge(
+    """The method to use when ordering `TipoMovimento`."""
+    orderBy: [TipoMovimentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): TipoMovimentosEdge
+}
+
+"""All input for the `deleteUnidadeMedidaById` mutation."""
+input DeleteUnidadeMedidaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteUnidadeMedida` mutation."""
+input DeleteUnidadeMedidaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `UnidadeMedida` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `UnidadeMedida` mutation."""
+type DeleteUnidadeMedidaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `UnidadeMedida` that was deleted by this mutation."""
+  unidadeMedida: UnidadeMedida
+  deletedUnidadeMedidaId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `UnidadeMedida`. May be used by Relay 1."""
+  unidadeMedidaEdge(
+    """The method to use when ordering `UnidadeMedida`."""
+    orderBy: [UnidadeMedidasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UnidadeMedidasEdge
+}
+
+"""All input for the `deleteUsuarioById` mutation."""
+input DeleteUsuarioByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteUsuario` mutation."""
+input DeleteUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Usuario` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Usuario` mutation."""
+type DeleteUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Usuario` that was deleted by this mutation."""
+  usuario: Usuario
+  deletedUsuarioId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `GrupoUsuario` that is related to this `Usuario`."""
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """An edge for our `Usuario`. May be used by Relay 1."""
+  usuarioEdge(
+    """The method to use when ordering `Usuario`."""
+    orderBy: [UsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UsuariosEdge
+}
+
+"""All input for the `deleteVendaById` mutation."""
+input DeleteVendaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteVendaFormapagamentoById` mutation."""
+input DeleteVendaFormapagamentoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteVendaFormapagamento` mutation."""
+input DeleteVendaFormapagamentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `VendaFormapagamento` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `VendaFormapagamento` mutation."""
+type DeleteVendaFormapagamentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaFormapagamento` that was deleted by this mutation."""
+  vendaFormapagamento: VendaFormapagamento
+  deletedVendaFormapagamentoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `VendaFormapagamento`. May be used by Relay 1."""
+  vendaFormapagamentoEdge(
+    """The method to use when ordering `VendaFormapagamento`."""
+    orderBy: [VendaFormapagamentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaFormapagamentosEdge
+}
+
+"""All input for the `deleteVenda` mutation."""
+input DeleteVendaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Venda` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `Venda` mutation."""
+type DeleteVendaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Venda` that was deleted by this mutation."""
+  venda: Venda
+  deletedVendaId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Pessoa` that is related to this `Venda`."""
+  pessoaByIdCliente: Pessoa
+
+  """Reads a single `Usuario` that is related to this `Venda`."""
+  usuarioByIdUsuario: Usuario
+
+  """Reads a single `TipoMovimento` that is related to this `Venda`."""
+  tipoMovimentoByIdTipoMovimento: TipoMovimento
+
+  """An edge for our `Venda`. May be used by Relay 1."""
+  vendaEdge(
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendasEdge
+}
+
+"""All input for the `deleteVendaProdutoById` mutation."""
+input DeleteVendaProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+  id: Int!
+}
+
+"""All input for the `deleteVendaProduto` mutation."""
+input DeleteVendaProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `VendaProduto` to be deleted.
+  """
+  nodeId: ID!
+}
+
+"""The output of our delete `VendaProduto` mutation."""
+type DeleteVendaProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaProduto` that was deleted by this mutation."""
+  vendaProduto: VendaProduto
+  deletedVendaProdutoId: ID
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Venda` that is related to this `VendaProduto`."""
+  vendaByIdVenda: Venda
+
+  """Reads a single `Produto` that is related to this `VendaProduto`."""
+  produtoByIdProduto: Produto
+
+  """An edge for our `VendaProduto`. May be used by Relay 1."""
+  vendaProdutoEdge(
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaProdutosEdge
+}
+
+type FailedJob implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: BigInt!
+  connection: String!
+  queue: String!
+  payload: String!
+  exception: String!
+  failedAt: Datetime!
+}
+
+"""
+A condition to be used against `FailedJob` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input FailedJobCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+
+  """Checks for equality with the object’s `connection` field."""
+  connection: String
+
+  """Checks for equality with the object’s `queue` field."""
+  queue: String
+
+  """Checks for equality with the object’s `payload` field."""
+  payload: String
+
+  """Checks for equality with the object’s `exception` field."""
+  exception: String
+
+  """Checks for equality with the object’s `failedAt` field."""
+  failedAt: Datetime
+}
+
+"""An input for mutations affecting `FailedJob`"""
+input FailedJobInput {
+  id: BigInt
+  connection: String!
+  queue: String!
+  payload: String!
+  exception: String!
+  failedAt: Datetime
+}
+
+"""
+Represents an update to a `FailedJob`. Fields that are set will be updated.
+"""
+input FailedJobPatch {
+  id: BigInt
+  connection: String
+  queue: String
+  payload: String
+  exception: String
+  failedAt: Datetime
+}
+
+"""A connection to a list of `FailedJob` values."""
+type FailedJobsConnection {
+  """A list of `FailedJob` objects."""
+  nodes: [FailedJob]!
+
+  """
+  A list of edges which contains the `FailedJob` and cursor to aid in pagination.
+  """
+  edges: [FailedJobsEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `FailedJob` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `FailedJob` edge in the connection."""
+type FailedJobsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `FailedJob` at the end of the edge."""
+  node: FailedJob
+}
+
+"""Methods to use when ordering `FailedJob`."""
+enum FailedJobsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CONNECTION_ASC
+  CONNECTION_DESC
+  QUEUE_ASC
+  QUEUE_DESC
+  PAYLOAD_ASC
+  PAYLOAD_DESC
+  EXCEPTION_ASC
+  EXCEPTION_DESC
+  FAILED_AT_ASC
+  FAILED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type GrupoProduto implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  nome: TNome!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `ProdutoGrupo`."""
+  produtoGruposByIdGrupoProduto(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ProdutoGrupoCondition
+  ): ProdutoGruposConnection!
+}
+
+"""
+A condition to be used against `GrupoProduto` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input GrupoProdutoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `GrupoProduto`"""
+input GrupoProdutoInput {
+  id: Int
+  nome: TNome!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `GrupoProduto`. Fields that are set will be updated.
+"""
+input GrupoProdutoPatch {
+  id: Int
+  nome: TNome
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `GrupoProduto` values."""
+type GrupoProdutosConnection {
+  """A list of `GrupoProduto` objects."""
+  nodes: [GrupoProduto]!
+
+  """
+  A list of edges which contains the `GrupoProduto` and cursor to aid in pagination.
+  """
+  edges: [GrupoProdutosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `GrupoProduto` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `GrupoProduto` edge in the connection."""
+type GrupoProdutosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `GrupoProduto` at the end of the edge."""
+  node: GrupoProduto
+}
+
+"""Methods to use when ordering `GrupoProduto`."""
+enum GrupoProdutosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  NOME_ASC
+  NOME_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type GrupoUsuario implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  nome: TNome!
+  sigla: String!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `Usuario`."""
+  usuariosByIdGrupoUsuario(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Usuario`."""
+    orderBy: [UsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: UsuarioCondition
+  ): UsuariosConnection!
+
+  """Reads and enables pagination through a set of `GrupoUsuarioPermissao`."""
+  grupoUsuarioPermissaosByIdGrupoUsuario(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: GrupoUsuarioPermissaoCondition
+  ): GrupoUsuarioPermissaosConnection!
+}
+
+"""
+A condition to be used against `GrupoUsuario` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input GrupoUsuarioCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `sigla` field."""
+  sigla: String
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `GrupoUsuario`"""
+input GrupoUsuarioInput {
+  id: Int
+  nome: TNome!
+  sigla: String!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `GrupoUsuario`. Fields that are set will be updated.
+"""
+input GrupoUsuarioPatch {
+  id: Int
+  nome: TNome
+  sigla: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+type GrupoUsuarioPermissao implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idGrupoUsuario: Int!
+  idPermissao: Int!
+
+  """
+  Reads a single `GrupoUsuario` that is related to this `GrupoUsuarioPermissao`.
+  """
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """
+  Reads a single `Permissao` that is related to this `GrupoUsuarioPermissao`.
+  """
+  permissaoByIdPermissao: Permissao
+}
+
+"""
+A condition to be used against `GrupoUsuarioPermissao` object types. All fields
+are tested for equality and combined with a logical ‘and.’
+"""
+input GrupoUsuarioPermissaoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idGrupoUsuario` field."""
+  idGrupoUsuario: Int
+
+  """Checks for equality with the object’s `idPermissao` field."""
+  idPermissao: Int
+}
+
+"""An input for mutations affecting `GrupoUsuarioPermissao`"""
+input GrupoUsuarioPermissaoInput {
+  id: Int
+  idGrupoUsuario: Int!
+  idPermissao: Int!
+}
+
+"""
+Represents an update to a `GrupoUsuarioPermissao`. Fields that are set will be updated.
+"""
+input GrupoUsuarioPermissaoPatch {
+  id: Int
+  idGrupoUsuario: Int
+  idPermissao: Int
+}
+
+"""A connection to a list of `GrupoUsuarioPermissao` values."""
+type GrupoUsuarioPermissaosConnection {
+  """A list of `GrupoUsuarioPermissao` objects."""
+  nodes: [GrupoUsuarioPermissao]!
+
+  """
+  A list of edges which contains the `GrupoUsuarioPermissao` and cursor to aid in pagination.
+  """
+  edges: [GrupoUsuarioPermissaosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """
+  The count of *all* `GrupoUsuarioPermissao` you could get from the connection.
+  """
+  totalCount: Int!
+}
+
+"""A `GrupoUsuarioPermissao` edge in the connection."""
+type GrupoUsuarioPermissaosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `GrupoUsuarioPermissao` at the end of the edge."""
+  node: GrupoUsuarioPermissao
+}
+
+"""Methods to use when ordering `GrupoUsuarioPermissao`."""
+enum GrupoUsuarioPermissaosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_GRUPO_USUARIO_ASC
+  ID_GRUPO_USUARIO_DESC
+  ID_PERMISSAO_ASC
+  ID_PERMISSAO_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""A connection to a list of `GrupoUsuario` values."""
+type GrupoUsuariosConnection {
+  """A list of `GrupoUsuario` objects."""
+  nodes: [GrupoUsuario]!
+
+  """
+  A list of edges which contains the `GrupoUsuario` and cursor to aid in pagination.
+  """
+  edges: [GrupoUsuariosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `GrupoUsuario` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `GrupoUsuario` edge in the connection."""
+type GrupoUsuariosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `GrupoUsuario` at the end of the edge."""
+  node: GrupoUsuario
+}
+
+"""Methods to use when ordering `GrupoUsuario`."""
+enum GrupoUsuariosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  NOME_ASC
+  NOME_DESC
+  SIGLA_ASC
+  SIGLA_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A JavaScript object encoded in the JSON format as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type Migration implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  migration: String!
+  batch: Int!
+}
+
+"""
+A condition to be used against `Migration` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input MigrationCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `migration` field."""
+  migration: String
+
+  """Checks for equality with the object’s `batch` field."""
+  batch: Int
+}
+
+"""An input for mutations affecting `Migration`"""
+input MigrationInput {
+  id: Int
+  migration: String!
+  batch: Int!
+}
+
+"""
+Represents an update to a `Migration`. Fields that are set will be updated.
+"""
+input MigrationPatch {
+  id: Int
+  migration: String
+  batch: Int
+}
+
+"""A connection to a list of `Migration` values."""
+type MigrationsConnection {
+  """A list of `Migration` objects."""
+  nodes: [Migration]!
+
+  """
+  A list of edges which contains the `Migration` and cursor to aid in pagination.
+  """
+  edges: [MigrationsEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Migration` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Migration` edge in the connection."""
+type MigrationsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Migration` at the end of the edge."""
+  node: Migration
+}
+
+"""Methods to use when ordering `Migration`."""
+enum MigrationsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  MIGRATION_ASC
+  MIGRATION_DESC
+  BATCH_ASC
+  BATCH_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+The root mutation type which contains root level fields which mutate data.
+"""
+type Mutation {
+  """Creates a single `FailedJob`."""
+  createFailedJob(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateFailedJobInput!
+  ): CreateFailedJobPayload
+
+  """Creates a single `GrupoProduto`."""
+  createGrupoProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateGrupoProdutoInput!
+  ): CreateGrupoProdutoPayload
+
+  """Creates a single `GrupoUsuario`."""
+  createGrupoUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateGrupoUsuarioInput!
+  ): CreateGrupoUsuarioPayload
+
+  """Creates a single `GrupoUsuarioPermissao`."""
+  createGrupoUsuarioPermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateGrupoUsuarioPermissaoInput!
+  ): CreateGrupoUsuarioPermissaoPayload
+
+  """Creates a single `Migration`."""
+  createMigration(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateMigrationInput!
+  ): CreateMigrationPayload
+
+  """Creates a single `PasswordReset`."""
+  createPasswordReset(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreatePasswordResetInput!
+  ): CreatePasswordResetPayload
+
+  """Creates a single `Permissao`."""
+  createPermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreatePermissaoInput!
+  ): CreatePermissaoPayload
+
+  """Creates a single `Pessoa`."""
+  createPessoa(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreatePessoaInput!
+  ): CreatePessoaPayload
+
+  """Creates a single `Produto`."""
+  createProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateProdutoInput!
+  ): CreateProdutoPayload
+
+  """Creates a single `ProdutoGrupo`."""
+  createProdutoGrupo(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateProdutoGrupoInput!
+  ): CreateProdutoGrupoPayload
+
+  """Creates a single `TipoMovimento`."""
+  createTipoMovimento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateTipoMovimentoInput!
+  ): CreateTipoMovimentoPayload
+
+  """Creates a single `UnidadeMedida`."""
+  createUnidadeMedida(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateUnidadeMedidaInput!
+  ): CreateUnidadeMedidaPayload
+
+  """Creates a single `Usuario`."""
+  createUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateUsuarioInput!
+  ): CreateUsuarioPayload
+
+  """Creates a single `Venda`."""
+  createVenda(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateVendaInput!
+  ): CreateVendaPayload
+
+  """Creates a single `VendaFormapagamento`."""
+  createVendaFormapagamento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateVendaFormapagamentoInput!
+  ): CreateVendaFormapagamentoPayload
+
+  """Creates a single `VendaProduto`."""
+  createVendaProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: CreateVendaProdutoInput!
+  ): CreateVendaProdutoPayload
+
+  """Updates a single `FailedJob` using its globally unique id and a patch."""
+  updateFailedJob(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateFailedJobInput!
+  ): UpdateFailedJobPayload
+
+  """Updates a single `FailedJob` using a unique key and a patch."""
+  updateFailedJobById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateFailedJobByIdInput!
+  ): UpdateFailedJobPayload
+
+  """
+  Updates a single `GrupoProduto` using its globally unique id and a patch.
+  """
+  updateGrupoProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoProdutoInput!
+  ): UpdateGrupoProdutoPayload
+
+  """Updates a single `GrupoProduto` using a unique key and a patch."""
+  updateGrupoProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoProdutoByIdInput!
+  ): UpdateGrupoProdutoPayload
+
+  """
+  Updates a single `GrupoUsuario` using its globally unique id and a patch.
+  """
+  updateGrupoUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoUsuarioInput!
+  ): UpdateGrupoUsuarioPayload
+
+  """Updates a single `GrupoUsuario` using a unique key and a patch."""
+  updateGrupoUsuarioById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoUsuarioByIdInput!
+  ): UpdateGrupoUsuarioPayload
+
+  """
+  Updates a single `GrupoUsuarioPermissao` using its globally unique id and a patch.
+  """
+  updateGrupoUsuarioPermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoUsuarioPermissaoInput!
+  ): UpdateGrupoUsuarioPermissaoPayload
+
+  """
+  Updates a single `GrupoUsuarioPermissao` using a unique key and a patch.
+  """
+  updateGrupoUsuarioPermissaoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateGrupoUsuarioPermissaoByIdInput!
+  ): UpdateGrupoUsuarioPermissaoPayload
+
+  """Updates a single `Migration` using its globally unique id and a patch."""
+  updateMigration(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateMigrationInput!
+  ): UpdateMigrationPayload
+
+  """Updates a single `Migration` using a unique key and a patch."""
+  updateMigrationById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateMigrationByIdInput!
+  ): UpdateMigrationPayload
+
+  """Updates a single `Permissao` using its globally unique id and a patch."""
+  updatePermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePermissaoInput!
+  ): UpdatePermissaoPayload
+
+  """Updates a single `Permissao` using a unique key and a patch."""
+  updatePermissaoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePermissaoByIdInput!
+  ): UpdatePermissaoPayload
+
+  """Updates a single `Pessoa` using its globally unique id and a patch."""
+  updatePessoa(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePessoaInput!
+  ): UpdatePessoaPayload
+
+  """Updates a single `Pessoa` using a unique key and a patch."""
+  updatePessoaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdatePessoaByIdInput!
+  ): UpdatePessoaPayload
+
+  """Updates a single `Produto` using its globally unique id and a patch."""
+  updateProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateProdutoInput!
+  ): UpdateProdutoPayload
+
+  """Updates a single `Produto` using a unique key and a patch."""
+  updateProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateProdutoByIdInput!
+  ): UpdateProdutoPayload
+
+  """
+  Updates a single `ProdutoGrupo` using its globally unique id and a patch.
+  """
+  updateProdutoGrupo(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateProdutoGrupoInput!
+  ): UpdateProdutoGrupoPayload
+
+  """Updates a single `ProdutoGrupo` using a unique key and a patch."""
+  updateProdutoGrupoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateProdutoGrupoByIdInput!
+  ): UpdateProdutoGrupoPayload
+
+  """
+  Updates a single `TipoMovimento` using its globally unique id and a patch.
+  """
+  updateTipoMovimento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateTipoMovimentoInput!
+  ): UpdateTipoMovimentoPayload
+
+  """Updates a single `TipoMovimento` using a unique key and a patch."""
+  updateTipoMovimentoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateTipoMovimentoByIdInput!
+  ): UpdateTipoMovimentoPayload
+
+  """
+  Updates a single `UnidadeMedida` using its globally unique id and a patch.
+  """
+  updateUnidadeMedida(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateUnidadeMedidaInput!
+  ): UpdateUnidadeMedidaPayload
+
+  """Updates a single `UnidadeMedida` using a unique key and a patch."""
+  updateUnidadeMedidaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateUnidadeMedidaByIdInput!
+  ): UpdateUnidadeMedidaPayload
+
+  """Updates a single `Usuario` using its globally unique id and a patch."""
+  updateUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateUsuarioInput!
+  ): UpdateUsuarioPayload
+
+  """Updates a single `Usuario` using a unique key and a patch."""
+  updateUsuarioById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateUsuarioByIdInput!
+  ): UpdateUsuarioPayload
+
+  """Updates a single `Venda` using its globally unique id and a patch."""
+  updateVenda(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaInput!
+  ): UpdateVendaPayload
+
+  """Updates a single `Venda` using a unique key and a patch."""
+  updateVendaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaByIdInput!
+  ): UpdateVendaPayload
+
+  """
+  Updates a single `VendaFormapagamento` using its globally unique id and a patch.
+  """
+  updateVendaFormapagamento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaFormapagamentoInput!
+  ): UpdateVendaFormapagamentoPayload
+
+  """Updates a single `VendaFormapagamento` using a unique key and a patch."""
+  updateVendaFormapagamentoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaFormapagamentoByIdInput!
+  ): UpdateVendaFormapagamentoPayload
+
+  """
+  Updates a single `VendaProduto` using its globally unique id and a patch.
+  """
+  updateVendaProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaProdutoInput!
+  ): UpdateVendaProdutoPayload
+
+  """Updates a single `VendaProduto` using a unique key and a patch."""
+  updateVendaProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: UpdateVendaProdutoByIdInput!
+  ): UpdateVendaProdutoPayload
+
+  """Deletes a single `FailedJob` using its globally unique id."""
+  deleteFailedJob(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteFailedJobInput!
+  ): DeleteFailedJobPayload
+
+  """Deletes a single `FailedJob` using a unique key."""
+  deleteFailedJobById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteFailedJobByIdInput!
+  ): DeleteFailedJobPayload
+
+  """Deletes a single `GrupoProduto` using its globally unique id."""
+  deleteGrupoProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoProdutoInput!
+  ): DeleteGrupoProdutoPayload
+
+  """Deletes a single `GrupoProduto` using a unique key."""
+  deleteGrupoProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoProdutoByIdInput!
+  ): DeleteGrupoProdutoPayload
+
+  """Deletes a single `GrupoUsuario` using its globally unique id."""
+  deleteGrupoUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoUsuarioInput!
+  ): DeleteGrupoUsuarioPayload
+
+  """Deletes a single `GrupoUsuario` using a unique key."""
+  deleteGrupoUsuarioById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoUsuarioByIdInput!
+  ): DeleteGrupoUsuarioPayload
+
+  """Deletes a single `GrupoUsuarioPermissao` using its globally unique id."""
+  deleteGrupoUsuarioPermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoUsuarioPermissaoInput!
+  ): DeleteGrupoUsuarioPermissaoPayload
+
+  """Deletes a single `GrupoUsuarioPermissao` using a unique key."""
+  deleteGrupoUsuarioPermissaoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteGrupoUsuarioPermissaoByIdInput!
+  ): DeleteGrupoUsuarioPermissaoPayload
+
+  """Deletes a single `Migration` using its globally unique id."""
+  deleteMigration(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteMigrationInput!
+  ): DeleteMigrationPayload
+
+  """Deletes a single `Migration` using a unique key."""
+  deleteMigrationById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteMigrationByIdInput!
+  ): DeleteMigrationPayload
+
+  """Deletes a single `Permissao` using its globally unique id."""
+  deletePermissao(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePermissaoInput!
+  ): DeletePermissaoPayload
+
+  """Deletes a single `Permissao` using a unique key."""
+  deletePermissaoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePermissaoByIdInput!
+  ): DeletePermissaoPayload
+
+  """Deletes a single `Pessoa` using its globally unique id."""
+  deletePessoa(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePessoaInput!
+  ): DeletePessoaPayload
+
+  """Deletes a single `Pessoa` using a unique key."""
+  deletePessoaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeletePessoaByIdInput!
+  ): DeletePessoaPayload
+
+  """Deletes a single `Produto` using its globally unique id."""
+  deleteProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteProdutoInput!
+  ): DeleteProdutoPayload
+
+  """Deletes a single `Produto` using a unique key."""
+  deleteProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteProdutoByIdInput!
+  ): DeleteProdutoPayload
+
+  """Deletes a single `ProdutoGrupo` using its globally unique id."""
+  deleteProdutoGrupo(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteProdutoGrupoInput!
+  ): DeleteProdutoGrupoPayload
+
+  """Deletes a single `ProdutoGrupo` using a unique key."""
+  deleteProdutoGrupoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteProdutoGrupoByIdInput!
+  ): DeleteProdutoGrupoPayload
+
+  """Deletes a single `TipoMovimento` using its globally unique id."""
+  deleteTipoMovimento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteTipoMovimentoInput!
+  ): DeleteTipoMovimentoPayload
+
+  """Deletes a single `TipoMovimento` using a unique key."""
+  deleteTipoMovimentoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteTipoMovimentoByIdInput!
+  ): DeleteTipoMovimentoPayload
+
+  """Deletes a single `UnidadeMedida` using its globally unique id."""
+  deleteUnidadeMedida(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteUnidadeMedidaInput!
+  ): DeleteUnidadeMedidaPayload
+
+  """Deletes a single `UnidadeMedida` using a unique key."""
+  deleteUnidadeMedidaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteUnidadeMedidaByIdInput!
+  ): DeleteUnidadeMedidaPayload
+
+  """Deletes a single `Usuario` using its globally unique id."""
+  deleteUsuario(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteUsuarioInput!
+  ): DeleteUsuarioPayload
+
+  """Deletes a single `Usuario` using a unique key."""
+  deleteUsuarioById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteUsuarioByIdInput!
+  ): DeleteUsuarioPayload
+
+  """Deletes a single `Venda` using its globally unique id."""
+  deleteVenda(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaInput!
+  ): DeleteVendaPayload
+
+  """Deletes a single `Venda` using a unique key."""
+  deleteVendaById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaByIdInput!
+  ): DeleteVendaPayload
+
+  """Deletes a single `VendaFormapagamento` using its globally unique id."""
+  deleteVendaFormapagamento(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaFormapagamentoInput!
+  ): DeleteVendaFormapagamentoPayload
+
+  """Deletes a single `VendaFormapagamento` using a unique key."""
+  deleteVendaFormapagamentoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaFormapagamentoByIdInput!
+  ): DeleteVendaFormapagamentoPayload
+
+  """Deletes a single `VendaProduto` using its globally unique id."""
+  deleteVendaProduto(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaProdutoInput!
+  ): DeleteVendaProdutoPayload
+
+  """Deletes a single `VendaProduto` using a unique key."""
+  deleteVendaProdutoById(
+    """
+    The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields.
+    """
+    input: DeleteVendaProdutoByIdInput!
+  ): DeleteVendaProdutoPayload
+}
+
+"""An object with a globally unique `ID`."""
+interface Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: Cursor
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: Cursor
+}
+
+type PasswordReset {
+  email: String!
+  token: String!
+  createdAt: Datetime
+}
+
+"""
+A condition to be used against `PasswordReset` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input PasswordResetCondition {
+  """Checks for equality with the object’s `email` field."""
+  email: String
+
+  """Checks for equality with the object’s `token` field."""
+  token: String
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+}
+
+"""An input for mutations affecting `PasswordReset`"""
+input PasswordResetInput {
+  email: String!
+  token: String!
+  createdAt: Datetime
+}
+
+"""A connection to a list of `PasswordReset` values."""
+type PasswordResetsConnection {
+  """A list of `PasswordReset` objects."""
+  nodes: [PasswordReset]!
+
+  """
+  A list of edges which contains the `PasswordReset` and cursor to aid in pagination.
+  """
+  edges: [PasswordResetsEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `PasswordReset` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `PasswordReset` edge in the connection."""
+type PasswordResetsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `PasswordReset` at the end of the edge."""
+  node: PasswordReset
+}
+
+"""Methods to use when ordering `PasswordReset`."""
+enum PasswordResetsOrderBy {
+  NATURAL
+  EMAIL_ASC
+  EMAIL_DESC
+  TOKEN_ASC
+  TOKEN_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+}
+
+type Permissao implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  nome: TNome!
+  descricao: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `GrupoUsuarioPermissao`."""
+  grupoUsuarioPermissaosByIdPermissao(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: GrupoUsuarioPermissaoCondition
+  ): GrupoUsuarioPermissaosConnection!
+}
+
+"""
+A condition to be used against `Permissao` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input PermissaoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `descricao` field."""
+  descricao: String
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `Permissao`"""
+input PermissaoInput {
+  id: Int
+  nome: TNome!
+  descricao: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `Permissao`. Fields that are set will be updated.
+"""
+input PermissaoPatch {
+  id: Int
+  nome: TNome
+  descricao: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `Permissao` values."""
+type PermissaosConnection {
+  """A list of `Permissao` objects."""
+  nodes: [Permissao]!
+
+  """
+  A list of edges which contains the `Permissao` and cursor to aid in pagination.
+  """
+  edges: [PermissaosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Permissao` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Permissao` edge in the connection."""
+type PermissaosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Permissao` at the end of the edge."""
+  node: Permissao
+}
+
+"""Methods to use when ordering `Permissao`."""
+enum PermissaosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  NOME_ASC
+  NOME_DESC
+  DESCRICAO_ASC
+  DESCRICAO_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type Pessoa implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idLegado: Int
+  nome: TNome!
+  razaoSocial: TNome
+  fisica: Boolean!
+  cpfcnpj: TCpfcnpj!
+  rgie: String
+  cliente: Boolean!
+  fornecedor: Boolean!
+  transportadora: Boolean!
+  funcionario: Boolean!
+  email: String
+  contatos: JSON
+  dadosAdicionais: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `Venda`."""
+  vendasByIdCliente(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaCondition
+  ): VendasConnection!
+}
+
+"""
+A condition to be used against `Pessoa` object types. All fields are tested for equality and combined with a logical ‘and.’
+"""
+input PessoaCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idLegado` field."""
+  idLegado: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `razaoSocial` field."""
+  razaoSocial: TNome
+
+  """Checks for equality with the object’s `fisica` field."""
+  fisica: Boolean
+
+  """Checks for equality with the object’s `cpfcnpj` field."""
+  cpfcnpj: TCpfcnpj
+
+  """Checks for equality with the object’s `rgie` field."""
+  rgie: String
+
+  """Checks for equality with the object’s `cliente` field."""
+  cliente: Boolean
+
+  """Checks for equality with the object’s `fornecedor` field."""
+  fornecedor: Boolean
+
+  """Checks for equality with the object’s `transportadora` field."""
+  transportadora: Boolean
+
+  """Checks for equality with the object’s `funcionario` field."""
+  funcionario: Boolean
+
+  """Checks for equality with the object’s `email` field."""
+  email: String
+
+  """Checks for equality with the object’s `contatos` field."""
+  contatos: JSON
+
+  """Checks for equality with the object’s `dadosAdicionais` field."""
+  dadosAdicionais: String
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `Pessoa`"""
+input PessoaInput {
+  id: Int
+  idLegado: Int
+  nome: TNome!
+  razaoSocial: TNome
+  fisica: Boolean
+  cpfcnpj: TCpfcnpj!
+  rgie: String
+  cliente: Boolean
+  fornecedor: Boolean
+  transportadora: Boolean
+  funcionario: Boolean
+  email: String
+  contatos: JSON
+  dadosAdicionais: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `Pessoa`. Fields that are set will be updated.
+"""
+input PessoaPatch {
+  id: Int
+  idLegado: Int
+  nome: TNome
+  razaoSocial: TNome
+  fisica: Boolean
+  cpfcnpj: TCpfcnpj
+  rgie: String
+  cliente: Boolean
+  fornecedor: Boolean
+  transportadora: Boolean
+  funcionario: Boolean
+  email: String
+  contatos: JSON
+  dadosAdicionais: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `Pessoa` values."""
+type PessoasConnection {
+  """A list of `Pessoa` objects."""
+  nodes: [Pessoa]!
+
+  """
+  A list of edges which contains the `Pessoa` and cursor to aid in pagination.
+  """
+  edges: [PessoasEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Pessoa` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Pessoa` edge in the connection."""
+type PessoasEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Pessoa` at the end of the edge."""
+  node: Pessoa
+}
+
+"""Methods to use when ordering `Pessoa`."""
+enum PessoasOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_LEGADO_ASC
+  ID_LEGADO_DESC
+  NOME_ASC
+  NOME_DESC
+  RAZAO_SOCIAL_ASC
+  RAZAO_SOCIAL_DESC
+  FISICA_ASC
+  FISICA_DESC
+  CPFCNPJ_ASC
+  CPFCNPJ_DESC
+  RGIE_ASC
+  RGIE_DESC
+  CLIENTE_ASC
+  CLIENTE_DESC
+  FORNECEDOR_ASC
+  FORNECEDOR_DESC
+  TRANSPORTADORA_ASC
+  TRANSPORTADORA_DESC
+  FUNCIONARIO_ASC
+  FUNCIONARIO_DESC
+  EMAIL_ASC
+  EMAIL_DESC
+  CONTATOS_ASC
+  CONTATOS_DESC
+  DADOS_ADICIONAIS_ASC
+  DADOS_ADICIONAIS_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type Produto implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idUnidadeMedida: Int!
+  idLegado: String
+  nome: TNome!
+  descricao: String
+  precoVenda: TPreco4
+  precoPromocao: TPreco4
+  precoCusto: TPreco4
+  estoque: TQtde2
+  estoqueMinimo: TQtde2
+  estoqueMaximo: TQtde2
+  pesoBruto: TQtde4
+  pesoLiquido: TQtde4
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads a single `UnidadeMedida` that is related to this `Produto`."""
+  unidadeMedidaByIdUnidadeMedida: UnidadeMedida
+
+  """Reads and enables pagination through a set of `ProdutoGrupo`."""
+  produtoGruposByIdProduto(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ProdutoGrupoCondition
+  ): ProdutoGruposConnection!
+
+  """Reads and enables pagination through a set of `VendaProduto`."""
+  vendaProdutosByIdProduto(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaProdutoCondition
+  ): VendaProdutosConnection!
+}
+
+"""
+A condition to be used against `Produto` object types. All fields are tested for equality and combined with a logical ‘and.’
+"""
+input ProdutoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idUnidadeMedida` field."""
+  idUnidadeMedida: Int
+
+  """Checks for equality with the object’s `idLegado` field."""
+  idLegado: String
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `descricao` field."""
+  descricao: String
+
+  """Checks for equality with the object’s `precoVenda` field."""
+  precoVenda: TPreco4
+
+  """Checks for equality with the object’s `precoPromocao` field."""
+  precoPromocao: TPreco4
+
+  """Checks for equality with the object’s `precoCusto` field."""
+  precoCusto: TPreco4
+
+  """Checks for equality with the object’s `estoque` field."""
+  estoque: TQtde2
+
+  """Checks for equality with the object’s `estoqueMinimo` field."""
+  estoqueMinimo: TQtde2
+
+  """Checks for equality with the object’s `estoqueMaximo` field."""
+  estoqueMaximo: TQtde2
+
+  """Checks for equality with the object’s `pesoBruto` field."""
+  pesoBruto: TQtde4
+
+  """Checks for equality with the object’s `pesoLiquido` field."""
+  pesoLiquido: TQtde4
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+type ProdutoGrupo implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idProduto: Int!
+  idGrupoProduto: Int!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads a single `Produto` that is related to this `ProdutoGrupo`."""
+  produtoByIdProduto: Produto
+
+  """Reads a single `GrupoProduto` that is related to this `ProdutoGrupo`."""
+  grupoProdutoByIdGrupoProduto: GrupoProduto
+}
+
+"""
+A condition to be used against `ProdutoGrupo` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input ProdutoGrupoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idProduto` field."""
+  idProduto: Int
+
+  """Checks for equality with the object’s `idGrupoProduto` field."""
+  idGrupoProduto: Int
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `ProdutoGrupo`"""
+input ProdutoGrupoInput {
+  id: Int
+  idProduto: Int!
+  idGrupoProduto: Int!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `ProdutoGrupo`. Fields that are set will be updated.
+"""
+input ProdutoGrupoPatch {
+  id: Int
+  idProduto: Int
+  idGrupoProduto: Int
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `ProdutoGrupo` values."""
+type ProdutoGruposConnection {
+  """A list of `ProdutoGrupo` objects."""
+  nodes: [ProdutoGrupo]!
+
+  """
+  A list of edges which contains the `ProdutoGrupo` and cursor to aid in pagination.
+  """
+  edges: [ProdutoGruposEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `ProdutoGrupo` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `ProdutoGrupo` edge in the connection."""
+type ProdutoGruposEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `ProdutoGrupo` at the end of the edge."""
+  node: ProdutoGrupo
+}
+
+"""Methods to use when ordering `ProdutoGrupo`."""
+enum ProdutoGruposOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_PRODUTO_ASC
+  ID_PRODUTO_DESC
+  ID_GRUPO_PRODUTO_ASC
+  ID_GRUPO_PRODUTO_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""An input for mutations affecting `Produto`"""
+input ProdutoInput {
+  id: Int
+  idUnidadeMedida: Int!
+  idLegado: String
+  nome: TNome!
+  descricao: String
+  precoVenda: TPreco4
+  precoPromocao: TPreco4
+  precoCusto: TPreco4
+  estoque: TQtde2
+  estoqueMinimo: TQtde2
+  estoqueMaximo: TQtde2
+  pesoBruto: TQtde4
+  pesoLiquido: TQtde4
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `Produto`. Fields that are set will be updated.
+"""
+input ProdutoPatch {
+  id: Int
+  idUnidadeMedida: Int
+  idLegado: String
+  nome: TNome
+  descricao: String
+  precoVenda: TPreco4
+  precoPromocao: TPreco4
+  precoCusto: TPreco4
+  estoque: TQtde2
+  estoqueMinimo: TQtde2
+  estoqueMaximo: TQtde2
+  pesoBruto: TQtde4
+  pesoLiquido: TQtde4
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `Produto` values."""
+type ProdutosConnection {
+  """A list of `Produto` objects."""
+  nodes: [Produto]!
+
+  """
+  A list of edges which contains the `Produto` and cursor to aid in pagination.
+  """
+  edges: [ProdutosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Produto` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Produto` edge in the connection."""
+type ProdutosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Produto` at the end of the edge."""
+  node: Produto
+}
+
+"""Methods to use when ordering `Produto`."""
+enum ProdutosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_UNIDADE_MEDIDA_ASC
+  ID_UNIDADE_MEDIDA_DESC
+  ID_LEGADO_ASC
+  ID_LEGADO_DESC
+  NOME_ASC
+  NOME_DESC
+  DESCRICAO_ASC
+  DESCRICAO_DESC
+  PRECO_VENDA_ASC
+  PRECO_VENDA_DESC
+  PRECO_PROMOCAO_ASC
+  PRECO_PROMOCAO_DESC
+  PRECO_CUSTO_ASC
+  PRECO_CUSTO_DESC
+  ESTOQUE_ASC
+  ESTOQUE_DESC
+  ESTOQUE_MINIMO_ASC
+  ESTOQUE_MINIMO_DESC
+  ESTOQUE_MAXIMO_ASC
+  ESTOQUE_MAXIMO_DESC
+  PESO_BRUTO_ASC
+  PESO_BRUTO_DESC
+  PESO_LIQUIDO_ASC
+  PESO_LIQUIDO_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""The root query type which gives access points into the data universe."""
+type Query implements Node {
+  """
+  Exposes the root query type nested one level down. This is helpful for Relay 1
+  which can only query top level fields if they are in a particular form.
+  """
+  query: Query!
+
+  """
+  The root query type must be a `Node` to work well with Relay 1 mutations. This just resolves to `query`.
+  """
+  nodeId: ID!
+
+  """Fetches an object given its globally unique `ID`."""
+  node(
+    """The globally unique `ID`."""
+    nodeId: ID!
+  ): Node
+
+  """Reads and enables pagination through a set of `FailedJob`."""
+  allFailedJobs(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `FailedJob`."""
+    orderBy: [FailedJobsOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: FailedJobCondition
+  ): FailedJobsConnection
+
+  """Reads and enables pagination through a set of `GrupoProduto`."""
+  allGrupoProdutos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `GrupoProduto`."""
+    orderBy: [GrupoProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: GrupoProdutoCondition
+  ): GrupoProdutosConnection
+
+  """Reads and enables pagination through a set of `GrupoUsuario`."""
+  allGrupoUsuarios(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `GrupoUsuario`."""
+    orderBy: [GrupoUsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: GrupoUsuarioCondition
+  ): GrupoUsuariosConnection
+
+  """Reads and enables pagination through a set of `GrupoUsuarioPermissao`."""
+  allGrupoUsuarioPermissaos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: GrupoUsuarioPermissaoCondition
+  ): GrupoUsuarioPermissaosConnection
+
+  """Reads and enables pagination through a set of `Migration`."""
+  allMigrations(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Migration`."""
+    orderBy: [MigrationsOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: MigrationCondition
+  ): MigrationsConnection
+
+  """Reads and enables pagination through a set of `PasswordReset`."""
+  allPasswordResets(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `PasswordReset`."""
+    orderBy: [PasswordResetsOrderBy!] = [NATURAL]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PasswordResetCondition
+  ): PasswordResetsConnection
+
+  """Reads and enables pagination through a set of `Permissao`."""
+  allPermissaos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Permissao`."""
+    orderBy: [PermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PermissaoCondition
+  ): PermissaosConnection
+
+  """Reads and enables pagination through a set of `Pessoa`."""
+  allPessoas(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Pessoa`."""
+    orderBy: [PessoasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: PessoaCondition
+  ): PessoasConnection
+
+  """Reads and enables pagination through a set of `Produto`."""
+  allProdutos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Produto`."""
+    orderBy: [ProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ProdutoCondition
+  ): ProdutosConnection
+
+  """Reads and enables pagination through a set of `ProdutoGrupo`."""
+  allProdutoGrupos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ProdutoGrupoCondition
+  ): ProdutoGruposConnection
+
+  """Reads and enables pagination through a set of `TipoMovimento`."""
+  allTipoMovimentos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `TipoMovimento`."""
+    orderBy: [TipoMovimentosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: TipoMovimentoCondition
+  ): TipoMovimentosConnection
+
+  """Reads and enables pagination through a set of `UnidadeMedida`."""
+  allUnidadeMedidas(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `UnidadeMedida`."""
+    orderBy: [UnidadeMedidasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: UnidadeMedidaCondition
+  ): UnidadeMedidasConnection
+
+  """Reads and enables pagination through a set of `Usuario`."""
+  allUsuarios(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Usuario`."""
+    orderBy: [UsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: UsuarioCondition
+  ): UsuariosConnection
+
+  """Reads and enables pagination through a set of `Venda`."""
+  allVendas(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaCondition
+  ): VendasConnection
+
+  """Reads and enables pagination through a set of `VendaFormapagamento`."""
+  allVendaFormapagamentos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `VendaFormapagamento`."""
+    orderBy: [VendaFormapagamentosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaFormapagamentoCondition
+  ): VendaFormapagamentosConnection
+
+  """Reads and enables pagination through a set of `VendaProduto`."""
+  allVendaProdutos(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaProdutoCondition
+  ): VendaProdutosConnection
+  failedJobById(id: BigInt!): FailedJob
+  grupoProdutoById(id: Int!): GrupoProduto
+  grupoUsuarioById(id: Int!): GrupoUsuario
+  grupoUsuarioPermissaoById(id: Int!): GrupoUsuarioPermissao
+  migrationById(id: Int!): Migration
+  permissaoById(id: Int!): Permissao
+  pessoaById(id: Int!): Pessoa
+  produtoById(id: Int!): Produto
+  produtoGrupoById(id: Int!): ProdutoGrupo
+  tipoMovimentoById(id: Int!): TipoMovimento
+  unidadeMedidaById(id: Int!): UnidadeMedida
+  usuarioById(id: Int!): Usuario
+  vendaById(id: Int!): Venda
+  vendaFormapagamentoById(id: Int!): VendaFormapagamento
+  vendaProdutoById(id: Int!): VendaProduto
+
+  """Reads a single `FailedJob` using its globally unique `ID`."""
+  failedJob(
+    """The globally unique `ID` to be used in selecting a single `FailedJob`."""
+    nodeId: ID!
+  ): FailedJob
+
+  """Reads a single `GrupoProduto` using its globally unique `ID`."""
+  grupoProduto(
+    """
+    The globally unique `ID` to be used in selecting a single `GrupoProduto`.
+    """
+    nodeId: ID!
+  ): GrupoProduto
+
+  """Reads a single `GrupoUsuario` using its globally unique `ID`."""
+  grupoUsuario(
+    """
+    The globally unique `ID` to be used in selecting a single `GrupoUsuario`.
+    """
+    nodeId: ID!
+  ): GrupoUsuario
+
+  """Reads a single `GrupoUsuarioPermissao` using its globally unique `ID`."""
+  grupoUsuarioPermissao(
+    """
+    The globally unique `ID` to be used in selecting a single `GrupoUsuarioPermissao`.
+    """
+    nodeId: ID!
+  ): GrupoUsuarioPermissao
+
+  """Reads a single `Migration` using its globally unique `ID`."""
+  migration(
+    """The globally unique `ID` to be used in selecting a single `Migration`."""
+    nodeId: ID!
+  ): Migration
+
+  """Reads a single `Permissao` using its globally unique `ID`."""
+  permissao(
+    """The globally unique `ID` to be used in selecting a single `Permissao`."""
+    nodeId: ID!
+  ): Permissao
+
+  """Reads a single `Pessoa` using its globally unique `ID`."""
+  pessoa(
+    """The globally unique `ID` to be used in selecting a single `Pessoa`."""
+    nodeId: ID!
+  ): Pessoa
+
+  """Reads a single `Produto` using its globally unique `ID`."""
+  produto(
+    """The globally unique `ID` to be used in selecting a single `Produto`."""
+    nodeId: ID!
+  ): Produto
+
+  """Reads a single `ProdutoGrupo` using its globally unique `ID`."""
+  produtoGrupo(
+    """
+    The globally unique `ID` to be used in selecting a single `ProdutoGrupo`.
+    """
+    nodeId: ID!
+  ): ProdutoGrupo
+
+  """Reads a single `TipoMovimento` using its globally unique `ID`."""
+  tipoMovimento(
+    """
+    The globally unique `ID` to be used in selecting a single `TipoMovimento`.
+    """
+    nodeId: ID!
+  ): TipoMovimento
+
+  """Reads a single `UnidadeMedida` using its globally unique `ID`."""
+  unidadeMedida(
+    """
+    The globally unique `ID` to be used in selecting a single `UnidadeMedida`.
+    """
+    nodeId: ID!
+  ): UnidadeMedida
+
+  """Reads a single `Usuario` using its globally unique `ID`."""
+  usuario(
+    """The globally unique `ID` to be used in selecting a single `Usuario`."""
+    nodeId: ID!
+  ): Usuario
+
+  """Reads a single `Venda` using its globally unique `ID`."""
+  venda(
+    """The globally unique `ID` to be used in selecting a single `Venda`."""
+    nodeId: ID!
+  ): Venda
+
+  """Reads a single `VendaFormapagamento` using its globally unique `ID`."""
+  vendaFormapagamento(
+    """
+    The globally unique `ID` to be used in selecting a single `VendaFormapagamento`.
+    """
+    nodeId: ID!
+  ): VendaFormapagamento
+
+  """Reads a single `VendaProduto` using its globally unique `ID`."""
+  vendaProduto(
+    """
+    The globally unique `ID` to be used in selecting a single `VendaProduto`.
+    """
+    nodeId: ID!
+  ): VendaProduto
+}
+
+scalar TCpfcnpj
+
+type TipoMovimento implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idCfop: Int!
+  nome: TNome!
+
+  """0=venda, 1=compra"""
+  uso: String!
+  movimentaEstoque: Boolean!
+  emiteNfe: Boolean!
+  geraFinanceiro: Boolean!
+
+  """verifica se estoque pode ou não ficar negativo em uma venda"""
+  validaEstoque: Boolean!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `Venda`."""
+  vendasByIdTipoMovimento(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaCondition
+  ): VendasConnection!
+}
+
+"""
+A condition to be used against `TipoMovimento` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input TipoMovimentoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idCfop` field."""
+  idCfop: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `uso` field."""
+  uso: String
+
+  """Checks for equality with the object’s `movimentaEstoque` field."""
+  movimentaEstoque: Boolean
+
+  """Checks for equality with the object’s `emiteNfe` field."""
+  emiteNfe: Boolean
+
+  """Checks for equality with the object’s `geraFinanceiro` field."""
+  geraFinanceiro: Boolean
+
+  """Checks for equality with the object’s `validaEstoque` field."""
+  validaEstoque: Boolean
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `TipoMovimento`"""
+input TipoMovimentoInput {
+  id: Int
+  idCfop: Int!
+  nome: TNome!
+
+  """0=venda, 1=compra"""
+  uso: String
+  movimentaEstoque: Boolean
+  emiteNfe: Boolean
+  geraFinanceiro: Boolean
+
+  """verifica se estoque pode ou não ficar negativo em uma venda"""
+  validaEstoque: Boolean
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `TipoMovimento`. Fields that are set will be updated.
+"""
+input TipoMovimentoPatch {
+  id: Int
+  idCfop: Int
+  nome: TNome
+
+  """0=venda, 1=compra"""
+  uso: String
+  movimentaEstoque: Boolean
+  emiteNfe: Boolean
+  geraFinanceiro: Boolean
+
+  """verifica se estoque pode ou não ficar negativo em uma venda"""
+  validaEstoque: Boolean
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `TipoMovimento` values."""
+type TipoMovimentosConnection {
+  """A list of `TipoMovimento` objects."""
+  nodes: [TipoMovimento]!
+
+  """
+  A list of edges which contains the `TipoMovimento` and cursor to aid in pagination.
+  """
+  edges: [TipoMovimentosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `TipoMovimento` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `TipoMovimento` edge in the connection."""
+type TipoMovimentosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `TipoMovimento` at the end of the edge."""
+  node: TipoMovimento
+}
+
+"""Methods to use when ordering `TipoMovimento`."""
+enum TipoMovimentosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_CFOP_ASC
+  ID_CFOP_DESC
+  NOME_ASC
+  NOME_DESC
+  USO_ASC
+  USO_DESC
+  MOVIMENTA_ESTOQUE_ASC
+  MOVIMENTA_ESTOQUE_DESC
+  EMITE_NFE_ASC
+  EMITE_NFE_DESC
+  GERA_FINANCEIRO_ASC
+  GERA_FINANCEIRO_DESC
+  VALIDA_ESTOQUE_ASC
+  VALIDA_ESTOQUE_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+scalar TNome
+
+scalar TPreco2
+
+scalar TPreco4
+
+scalar TQtde2
+
+scalar TQtde4
+
+type UnidadeMedida implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  sigla: String!
+  descricao: String!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads and enables pagination through a set of `Produto`."""
+  produtosByIdUnidadeMedida(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Produto`."""
+    orderBy: [ProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: ProdutoCondition
+  ): ProdutosConnection!
+}
+
+"""
+A condition to be used against `UnidadeMedida` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input UnidadeMedidaCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `sigla` field."""
+  sigla: String
+
+  """Checks for equality with the object’s `descricao` field."""
+  descricao: String
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `UnidadeMedida`"""
+input UnidadeMedidaInput {
+  id: Int
+  sigla: String!
+  descricao: String!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `UnidadeMedida`. Fields that are set will be updated.
+"""
+input UnidadeMedidaPatch {
+  id: Int
+  sigla: String
+  descricao: String
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `UnidadeMedida` values."""
+type UnidadeMedidasConnection {
+  """A list of `UnidadeMedida` objects."""
+  nodes: [UnidadeMedida]!
+
+  """
+  A list of edges which contains the `UnidadeMedida` and cursor to aid in pagination.
+  """
+  edges: [UnidadeMedidasEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `UnidadeMedida` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `UnidadeMedida` edge in the connection."""
+type UnidadeMedidasEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `UnidadeMedida` at the end of the edge."""
+  node: UnidadeMedida
+}
+
+"""Methods to use when ordering `UnidadeMedida`."""
+enum UnidadeMedidasOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  SIGLA_ASC
+  SIGLA_DESC
+  DESCRICAO_ASC
+  DESCRICAO_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""All input for the `updateFailedJobById` mutation."""
+input UpdateFailedJobByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `FailedJob` being updated.
+  """
+  failedJobPatch: FailedJobPatch!
+  id: BigInt!
+}
+
+"""All input for the `updateFailedJob` mutation."""
+input UpdateFailedJobInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `FailedJob` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `FailedJob` being updated.
+  """
+  failedJobPatch: FailedJobPatch!
+}
+
+"""The output of our update `FailedJob` mutation."""
+type UpdateFailedJobPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `FailedJob` that was updated by this mutation."""
+  failedJob: FailedJob
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `FailedJob`. May be used by Relay 1."""
+  failedJobEdge(
+    """The method to use when ordering `FailedJob`."""
+    orderBy: [FailedJobsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): FailedJobsEdge
+}
+
+"""All input for the `updateGrupoProdutoById` mutation."""
+input UpdateGrupoProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `GrupoProduto` being updated.
+  """
+  grupoProdutoPatch: GrupoProdutoPatch!
+  id: Int!
+}
+
+"""All input for the `updateGrupoProduto` mutation."""
+input UpdateGrupoProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoProduto` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `GrupoProduto` being updated.
+  """
+  grupoProdutoPatch: GrupoProdutoPatch!
+}
+
+"""The output of our update `GrupoProduto` mutation."""
+type UpdateGrupoProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoProduto` that was updated by this mutation."""
+  grupoProduto: GrupoProduto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoProduto`. May be used by Relay 1."""
+  grupoProdutoEdge(
+    """The method to use when ordering `GrupoProduto`."""
+    orderBy: [GrupoProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoProdutosEdge
+}
+
+"""All input for the `updateGrupoUsuarioById` mutation."""
+input UpdateGrupoUsuarioByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `GrupoUsuario` being updated.
+  """
+  grupoUsuarioPatch: GrupoUsuarioPatch!
+  id: Int!
+}
+
+"""All input for the `updateGrupoUsuario` mutation."""
+input UpdateGrupoUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoUsuario` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `GrupoUsuario` being updated.
+  """
+  grupoUsuarioPatch: GrupoUsuarioPatch!
+}
+
+"""The output of our update `GrupoUsuario` mutation."""
+type UpdateGrupoUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuario` that was updated by this mutation."""
+  grupoUsuario: GrupoUsuario
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `GrupoUsuario`. May be used by Relay 1."""
+  grupoUsuarioEdge(
+    """The method to use when ordering `GrupoUsuario`."""
+    orderBy: [GrupoUsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuariosEdge
+}
+
+"""All input for the `updateGrupoUsuarioPermissaoById` mutation."""
+input UpdateGrupoUsuarioPermissaoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `GrupoUsuarioPermissao` being updated.
+  """
+  grupoUsuarioPermissaoPatch: GrupoUsuarioPermissaoPatch!
+  id: Int!
+}
+
+"""All input for the `updateGrupoUsuarioPermissao` mutation."""
+input UpdateGrupoUsuarioPermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `GrupoUsuarioPermissao` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `GrupoUsuarioPermissao` being updated.
+  """
+  grupoUsuarioPermissaoPatch: GrupoUsuarioPermissaoPatch!
+}
+
+"""The output of our update `GrupoUsuarioPermissao` mutation."""
+type UpdateGrupoUsuarioPermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `GrupoUsuarioPermissao` that was updated by this mutation."""
+  grupoUsuarioPermissao: GrupoUsuarioPermissao
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """
+  Reads a single `GrupoUsuario` that is related to this `GrupoUsuarioPermissao`.
+  """
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """
+  Reads a single `Permissao` that is related to this `GrupoUsuarioPermissao`.
+  """
+  permissaoByIdPermissao: Permissao
+
+  """An edge for our `GrupoUsuarioPermissao`. May be used by Relay 1."""
+  grupoUsuarioPermissaoEdge(
+    """The method to use when ordering `GrupoUsuarioPermissao`."""
+    orderBy: [GrupoUsuarioPermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): GrupoUsuarioPermissaosEdge
+}
+
+"""All input for the `updateMigrationById` mutation."""
+input UpdateMigrationByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Migration` being updated.
+  """
+  migrationPatch: MigrationPatch!
+  id: Int!
+}
+
+"""All input for the `updateMigration` mutation."""
+input UpdateMigrationInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Migration` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Migration` being updated.
+  """
+  migrationPatch: MigrationPatch!
+}
+
+"""The output of our update `Migration` mutation."""
+type UpdateMigrationPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Migration` that was updated by this mutation."""
+  migration: Migration
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Migration`. May be used by Relay 1."""
+  migrationEdge(
+    """The method to use when ordering `Migration`."""
+    orderBy: [MigrationsOrderBy!] = [PRIMARY_KEY_ASC]
+  ): MigrationsEdge
+}
+
+"""All input for the `updatePermissaoById` mutation."""
+input UpdatePermissaoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Permissao` being updated.
+  """
+  permissaoPatch: PermissaoPatch!
+  id: Int!
+}
+
+"""All input for the `updatePermissao` mutation."""
+input UpdatePermissaoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Permissao` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Permissao` being updated.
+  """
+  permissaoPatch: PermissaoPatch!
+}
+
+"""The output of our update `Permissao` mutation."""
+type UpdatePermissaoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Permissao` that was updated by this mutation."""
+  permissao: Permissao
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Permissao`. May be used by Relay 1."""
+  permissaoEdge(
+    """The method to use when ordering `Permissao`."""
+    orderBy: [PermissaosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PermissaosEdge
+}
+
+"""All input for the `updatePessoaById` mutation."""
+input UpdatePessoaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Pessoa` being updated.
+  """
+  pessoaPatch: PessoaPatch!
+  id: Int!
+}
+
+"""All input for the `updatePessoa` mutation."""
+input UpdatePessoaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Pessoa` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Pessoa` being updated.
+  """
+  pessoaPatch: PessoaPatch!
+}
+
+"""The output of our update `Pessoa` mutation."""
+type UpdatePessoaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Pessoa` that was updated by this mutation."""
+  pessoa: Pessoa
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `Pessoa`. May be used by Relay 1."""
+  pessoaEdge(
+    """The method to use when ordering `Pessoa`."""
+    orderBy: [PessoasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): PessoasEdge
+}
+
+"""All input for the `updateProdutoById` mutation."""
+input UpdateProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Produto` being updated.
+  """
+  produtoPatch: ProdutoPatch!
+  id: Int!
+}
+
+"""All input for the `updateProdutoGrupoById` mutation."""
+input UpdateProdutoGrupoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `ProdutoGrupo` being updated.
+  """
+  produtoGrupoPatch: ProdutoGrupoPatch!
+  id: Int!
+}
+
+"""All input for the `updateProdutoGrupo` mutation."""
+input UpdateProdutoGrupoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `ProdutoGrupo` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `ProdutoGrupo` being updated.
+  """
+  produtoGrupoPatch: ProdutoGrupoPatch!
+}
+
+"""The output of our update `ProdutoGrupo` mutation."""
+type UpdateProdutoGrupoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `ProdutoGrupo` that was updated by this mutation."""
+  produtoGrupo: ProdutoGrupo
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Produto` that is related to this `ProdutoGrupo`."""
+  produtoByIdProduto: Produto
+
+  """Reads a single `GrupoProduto` that is related to this `ProdutoGrupo`."""
+  grupoProdutoByIdGrupoProduto: GrupoProduto
+
+  """An edge for our `ProdutoGrupo`. May be used by Relay 1."""
+  produtoGrupoEdge(
+    """The method to use when ordering `ProdutoGrupo`."""
+    orderBy: [ProdutoGruposOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutoGruposEdge
+}
+
+"""All input for the `updateProduto` mutation."""
+input UpdateProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Produto` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Produto` being updated.
+  """
+  produtoPatch: ProdutoPatch!
+}
+
+"""The output of our update `Produto` mutation."""
+type UpdateProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Produto` that was updated by this mutation."""
+  produto: Produto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `UnidadeMedida` that is related to this `Produto`."""
+  unidadeMedidaByIdUnidadeMedida: UnidadeMedida
+
+  """An edge for our `Produto`. May be used by Relay 1."""
+  produtoEdge(
+    """The method to use when ordering `Produto`."""
+    orderBy: [ProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): ProdutosEdge
+}
+
+"""All input for the `updateTipoMovimentoById` mutation."""
+input UpdateTipoMovimentoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `TipoMovimento` being updated.
+  """
+  tipoMovimentoPatch: TipoMovimentoPatch!
+  id: Int!
+}
+
+"""All input for the `updateTipoMovimento` mutation."""
+input UpdateTipoMovimentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `TipoMovimento` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `TipoMovimento` being updated.
+  """
+  tipoMovimentoPatch: TipoMovimentoPatch!
+}
+
+"""The output of our update `TipoMovimento` mutation."""
+type UpdateTipoMovimentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `TipoMovimento` that was updated by this mutation."""
+  tipoMovimento: TipoMovimento
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `TipoMovimento`. May be used by Relay 1."""
+  tipoMovimentoEdge(
+    """The method to use when ordering `TipoMovimento`."""
+    orderBy: [TipoMovimentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): TipoMovimentosEdge
+}
+
+"""All input for the `updateUnidadeMedidaById` mutation."""
+input UpdateUnidadeMedidaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `UnidadeMedida` being updated.
+  """
+  unidadeMedidaPatch: UnidadeMedidaPatch!
+  id: Int!
+}
+
+"""All input for the `updateUnidadeMedida` mutation."""
+input UpdateUnidadeMedidaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `UnidadeMedida` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `UnidadeMedida` being updated.
+  """
+  unidadeMedidaPatch: UnidadeMedidaPatch!
+}
+
+"""The output of our update `UnidadeMedida` mutation."""
+type UpdateUnidadeMedidaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `UnidadeMedida` that was updated by this mutation."""
+  unidadeMedida: UnidadeMedida
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `UnidadeMedida`. May be used by Relay 1."""
+  unidadeMedidaEdge(
+    """The method to use when ordering `UnidadeMedida`."""
+    orderBy: [UnidadeMedidasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UnidadeMedidasEdge
+}
+
+"""All input for the `updateUsuarioById` mutation."""
+input UpdateUsuarioByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Usuario` being updated.
+  """
+  usuarioPatch: UsuarioPatch!
+  id: Int!
+}
+
+"""All input for the `updateUsuario` mutation."""
+input UpdateUsuarioInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Usuario` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Usuario` being updated.
+  """
+  usuarioPatch: UsuarioPatch!
+}
+
+"""The output of our update `Usuario` mutation."""
+type UpdateUsuarioPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Usuario` that was updated by this mutation."""
+  usuario: Usuario
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `GrupoUsuario` that is related to this `Usuario`."""
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """An edge for our `Usuario`. May be used by Relay 1."""
+  usuarioEdge(
+    """The method to use when ordering `Usuario`."""
+    orderBy: [UsuariosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): UsuariosEdge
+}
+
+"""All input for the `updateVendaById` mutation."""
+input UpdateVendaByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `Venda` being updated.
+  """
+  vendaPatch: VendaPatch!
+  id: Int!
+}
+
+"""All input for the `updateVendaFormapagamentoById` mutation."""
+input UpdateVendaFormapagamentoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `VendaFormapagamento` being updated.
+  """
+  vendaFormapagamentoPatch: VendaFormapagamentoPatch!
+  id: Int!
+}
+
+"""All input for the `updateVendaFormapagamento` mutation."""
+input UpdateVendaFormapagamentoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `VendaFormapagamento` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `VendaFormapagamento` being updated.
+  """
+  vendaFormapagamentoPatch: VendaFormapagamentoPatch!
+}
+
+"""The output of our update `VendaFormapagamento` mutation."""
+type UpdateVendaFormapagamentoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaFormapagamento` that was updated by this mutation."""
+  vendaFormapagamento: VendaFormapagamento
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """An edge for our `VendaFormapagamento`. May be used by Relay 1."""
+  vendaFormapagamentoEdge(
+    """The method to use when ordering `VendaFormapagamento`."""
+    orderBy: [VendaFormapagamentosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaFormapagamentosEdge
+}
+
+"""All input for the `updateVenda` mutation."""
+input UpdateVendaInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `Venda` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `Venda` being updated.
+  """
+  vendaPatch: VendaPatch!
+}
+
+"""The output of our update `Venda` mutation."""
+type UpdateVendaPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `Venda` that was updated by this mutation."""
+  venda: Venda
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Pessoa` that is related to this `Venda`."""
+  pessoaByIdCliente: Pessoa
+
+  """Reads a single `Usuario` that is related to this `Venda`."""
+  usuarioByIdUsuario: Usuario
+
+  """Reads a single `TipoMovimento` that is related to this `Venda`."""
+  tipoMovimentoByIdTipoMovimento: TipoMovimento
+
+  """An edge for our `Venda`. May be used by Relay 1."""
+  vendaEdge(
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendasEdge
+}
+
+"""All input for the `updateVendaProdutoById` mutation."""
+input UpdateVendaProdutoByIdInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  An object where the defined keys will be set on the `VendaProduto` being updated.
+  """
+  vendaProdutoPatch: VendaProdutoPatch!
+  id: Int!
+}
+
+"""All input for the `updateVendaProduto` mutation."""
+input UpdateVendaProdutoInput {
+  """
+  An arbitrary string value with no semantic meaning. Will be included in the
+  payload verbatim. May be used to track mutations by the client.
+  """
+  clientMutationId: String
+
+  """
+  The globally unique `ID` which will identify a single `VendaProduto` to be updated.
+  """
+  nodeId: ID!
+
+  """
+  An object where the defined keys will be set on the `VendaProduto` being updated.
+  """
+  vendaProdutoPatch: VendaProdutoPatch!
+}
+
+"""The output of our update `VendaProduto` mutation."""
+type UpdateVendaProdutoPayload {
+  """
+  The exact same `clientMutationId` that was provided in the mutation input,
+  unchanged and unused. May be used by a client to track mutations.
+  """
+  clientMutationId: String
+
+  """The `VendaProduto` that was updated by this mutation."""
+  vendaProduto: VendaProduto
+
+  """
+  Our root query field type. Allows us to run any query from our mutation payload.
+  """
+  query: Query
+
+  """Reads a single `Venda` that is related to this `VendaProduto`."""
+  vendaByIdVenda: Venda
+
+  """Reads a single `Produto` that is related to this `VendaProduto`."""
+  produtoByIdProduto: Produto
+
+  """An edge for our `VendaProduto`. May be used by Relay 1."""
+  vendaProdutoEdge(
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+  ): VendaProdutosEdge
+}
+
+type Usuario implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idFuncionario: Int!
+  idGrupoUsuario: Int!
+  nome: TNome!
+  login: String!
+  senha: String!
+  bloqueado: Boolean!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads a single `GrupoUsuario` that is related to this `Usuario`."""
+  grupoUsuarioByIdGrupoUsuario: GrupoUsuario
+
+  """Reads and enables pagination through a set of `Venda`."""
+  vendasByIdUsuario(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `Venda`."""
+    orderBy: [VendasOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaCondition
+  ): VendasConnection!
+}
+
+"""
+A condition to be used against `Usuario` object types. All fields are tested for equality and combined with a logical ‘and.’
+"""
+input UsuarioCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idFuncionario` field."""
+  idFuncionario: Int
+
+  """Checks for equality with the object’s `idGrupoUsuario` field."""
+  idGrupoUsuario: Int
+
+  """Checks for equality with the object’s `nome` field."""
+  nome: TNome
+
+  """Checks for equality with the object’s `login` field."""
+  login: String
+
+  """Checks for equality with the object’s `senha` field."""
+  senha: String
+
+  """Checks for equality with the object’s `bloqueado` field."""
+  bloqueado: Boolean
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `Usuario`"""
+input UsuarioInput {
+  id: Int
+  idFuncionario: Int!
+  idGrupoUsuario: Int!
+  nome: TNome!
+  login: String!
+  senha: String!
+  bloqueado: Boolean
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `Usuario`. Fields that are set will be updated.
+"""
+input UsuarioPatch {
+  id: Int
+  idFuncionario: Int
+  idGrupoUsuario: Int
+  nome: TNome
+  login: String
+  senha: String
+  bloqueado: Boolean
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `Usuario` values."""
+type UsuariosConnection {
+  """A list of `Usuario` objects."""
+  nodes: [Usuario]!
+
+  """
+  A list of edges which contains the `Usuario` and cursor to aid in pagination.
+  """
+  edges: [UsuariosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Usuario` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Usuario` edge in the connection."""
+type UsuariosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Usuario` at the end of the edge."""
+  node: Usuario
+}
+
+"""Methods to use when ordering `Usuario`."""
+enum UsuariosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_FUNCIONARIO_ASC
+  ID_FUNCIONARIO_DESC
+  ID_GRUPO_USUARIO_ASC
+  ID_GRUPO_USUARIO_DESC
+  NOME_ASC
+  NOME_DESC
+  LOGIN_ASC
+  LOGIN_DESC
+  SENHA_ASC
+  SENHA_DESC
+  BLOQUEADO_ASC
+  BLOQUEADO_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+type Venda implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idLegado: Int
+  idCliente: Int!
+  idUsuario: Int!
+  idTipoMovimento: Int!
+  data: Datetime!
+  cliente: TNome!
+  observacao: String
+  totalProdutos: TPreco2!
+  desconto: TPreco2
+  totalGeral: TPreco2!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads a single `Pessoa` that is related to this `Venda`."""
+  pessoaByIdCliente: Pessoa
+
+  """Reads a single `Usuario` that is related to this `Venda`."""
+  usuarioByIdUsuario: Usuario
+
+  """Reads a single `TipoMovimento` that is related to this `Venda`."""
+  tipoMovimentoByIdTipoMovimento: TipoMovimento
+
+  """Reads and enables pagination through a set of `VendaProduto`."""
+  vendaProdutosByIdVenda(
+    """Only read the first `n` values of the set."""
+    first: Int
+
+    """Only read the last `n` values of the set."""
+    last: Int
+
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+
+    """The method to use when ordering `VendaProduto`."""
+    orderBy: [VendaProdutosOrderBy!] = [PRIMARY_KEY_ASC]
+
+    """
+    A condition to be used in determining which values should be returned by the collection.
+    """
+    condition: VendaProdutoCondition
+  ): VendaProdutosConnection!
+}
+
+"""
+A condition to be used against `Venda` object types. All fields are tested for equality and combined with a logical ‘and.’
+"""
+input VendaCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idLegado` field."""
+  idLegado: Int
+
+  """Checks for equality with the object’s `idCliente` field."""
+  idCliente: Int
+
+  """Checks for equality with the object’s `idUsuario` field."""
+  idUsuario: Int
+
+  """Checks for equality with the object’s `idTipoMovimento` field."""
+  idTipoMovimento: Int
+
+  """Checks for equality with the object’s `data` field."""
+  data: Datetime
+
+  """Checks for equality with the object’s `cliente` field."""
+  cliente: TNome
+
+  """Checks for equality with the object’s `observacao` field."""
+  observacao: String
+
+  """Checks for equality with the object’s `totalProdutos` field."""
+  totalProdutos: TPreco2
+
+  """Checks for equality with the object’s `desconto` field."""
+  desconto: TPreco2
+
+  """Checks for equality with the object’s `totalGeral` field."""
+  totalGeral: TPreco2
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+type VendaFormapagamento implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idVenda: Int!
+  idFormapagamento: Int!
+  prazoDias: Int!
+  vencimento: Date!
+  valor: TPreco2!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+A condition to be used against `VendaFormapagamento` object types. All fields
+are tested for equality and combined with a logical ‘and.’
+"""
+input VendaFormapagamentoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idVenda` field."""
+  idVenda: Int
+
+  """Checks for equality with the object’s `idFormapagamento` field."""
+  idFormapagamento: Int
+
+  """Checks for equality with the object’s `prazoDias` field."""
+  prazoDias: Int
+
+  """Checks for equality with the object’s `vencimento` field."""
+  vencimento: Date
+
+  """Checks for equality with the object’s `valor` field."""
+  valor: TPreco2
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `VendaFormapagamento`"""
+input VendaFormapagamentoInput {
+  id: Int
+  idVenda: Int!
+  idFormapagamento: Int!
+  prazoDias: Int!
+  vencimento: Date!
+  valor: TPreco2!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `VendaFormapagamento`. Fields that are set will be updated.
+"""
+input VendaFormapagamentoPatch {
+  id: Int
+  idVenda: Int
+  idFormapagamento: Int
+  prazoDias: Int
+  vencimento: Date
+  valor: TPreco2
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `VendaFormapagamento` values."""
+type VendaFormapagamentosConnection {
+  """A list of `VendaFormapagamento` objects."""
+  nodes: [VendaFormapagamento]!
+
+  """
+  A list of edges which contains the `VendaFormapagamento` and cursor to aid in pagination.
+  """
+  edges: [VendaFormapagamentosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """
+  The count of *all* `VendaFormapagamento` you could get from the connection.
+  """
+  totalCount: Int!
+}
+
+"""A `VendaFormapagamento` edge in the connection."""
+type VendaFormapagamentosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `VendaFormapagamento` at the end of the edge."""
+  node: VendaFormapagamento
+}
+
+"""Methods to use when ordering `VendaFormapagamento`."""
+enum VendaFormapagamentosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_VENDA_ASC
+  ID_VENDA_DESC
+  ID_FORMAPAGAMENTO_ASC
+  ID_FORMAPAGAMENTO_DESC
+  PRAZO_DIAS_ASC
+  PRAZO_DIAS_DESC
+  VENCIMENTO_ASC
+  VENCIMENTO_DESC
+  VALOR_ASC
+  VALOR_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""An input for mutations affecting `Venda`"""
+input VendaInput {
+  id: Int
+  idLegado: Int
+  idCliente: Int!
+  idUsuario: Int!
+  idTipoMovimento: Int!
+  data: Datetime!
+  cliente: TNome!
+  observacao: String
+  totalProdutos: TPreco2!
+  desconto: TPreco2
+  totalGeral: TPreco2!
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `Venda`. Fields that are set will be updated.
+"""
+input VendaPatch {
+  id: Int
+  idLegado: Int
+  idCliente: Int
+  idUsuario: Int
+  idTipoMovimento: Int
+  data: Datetime
+  cliente: TNome
+  observacao: String
+  totalProdutos: TPreco2
+  desconto: TPreco2
+  totalGeral: TPreco2
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+type VendaProduto implements Node {
+  """
+  A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+  """
+  nodeId: ID!
+  id: Int!
+  idVenda: Int!
+  idProduto: Int!
+  idCfop: Int!
+  nomeProduto: TNome!
+  quantidade: TQtde2
+  preco: TPreco4
+  impostos: JSON
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+
+  """Reads a single `Venda` that is related to this `VendaProduto`."""
+  vendaByIdVenda: Venda
+
+  """Reads a single `Produto` that is related to this `VendaProduto`."""
+  produtoByIdProduto: Produto
+}
+
+"""
+A condition to be used against `VendaProduto` object types. All fields are
+tested for equality and combined with a logical ‘and.’
+"""
+input VendaProdutoCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+
+  """Checks for equality with the object’s `idVenda` field."""
+  idVenda: Int
+
+  """Checks for equality with the object’s `idProduto` field."""
+  idProduto: Int
+
+  """Checks for equality with the object’s `idCfop` field."""
+  idCfop: Int
+
+  """Checks for equality with the object’s `nomeProduto` field."""
+  nomeProduto: TNome
+
+  """Checks for equality with the object’s `quantidade` field."""
+  quantidade: TQtde2
+
+  """Checks for equality with the object’s `preco` field."""
+  preco: TPreco4
+
+  """Checks for equality with the object’s `impostos` field."""
+  impostos: JSON
+
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+
+  """Checks for equality with the object’s `updatedAt` field."""
+  updatedAt: Datetime
+
+  """Checks for equality with the object’s `deletedAt` field."""
+  deletedAt: Datetime
+}
+
+"""An input for mutations affecting `VendaProduto`"""
+input VendaProdutoInput {
+  id: Int
+  idVenda: Int!
+  idProduto: Int!
+  idCfop: Int!
+  nomeProduto: TNome!
+  quantidade: TQtde2
+  preco: TPreco4
+  impostos: JSON
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""
+Represents an update to a `VendaProduto`. Fields that are set will be updated.
+"""
+input VendaProdutoPatch {
+  id: Int
+  idVenda: Int
+  idProduto: Int
+  idCfop: Int
+  nomeProduto: TNome
+  quantidade: TQtde2
+  preco: TPreco4
+  impostos: JSON
+  createdAt: Datetime
+  updatedAt: Datetime
+  deletedAt: Datetime
+}
+
+"""A connection to a list of `VendaProduto` values."""
+type VendaProdutosConnection {
+  """A list of `VendaProduto` objects."""
+  nodes: [VendaProduto]!
+
+  """
+  A list of edges which contains the `VendaProduto` and cursor to aid in pagination.
+  """
+  edges: [VendaProdutosEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `VendaProduto` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `VendaProduto` edge in the connection."""
+type VendaProdutosEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `VendaProduto` at the end of the edge."""
+  node: VendaProduto
+}
+
+"""Methods to use when ordering `VendaProduto`."""
+enum VendaProdutosOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_VENDA_ASC
+  ID_VENDA_DESC
+  ID_PRODUTO_ASC
+  ID_PRODUTO_DESC
+  ID_CFOP_ASC
+  ID_CFOP_DESC
+  NOME_PRODUTO_ASC
+  NOME_PRODUTO_DESC
+  QUANTIDADE_ASC
+  QUANTIDADE_DESC
+  PRECO_ASC
+  PRECO_DESC
+  IMPOSTOS_ASC
+  IMPOSTOS_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""A connection to a list of `Venda` values."""
+type VendasConnection {
+  """A list of `Venda` objects."""
+  nodes: [Venda]!
+
+  """
+  A list of edges which contains the `Venda` and cursor to aid in pagination.
+  """
+  edges: [VendasEdge!]!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """The count of *all* `Venda` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Venda` edge in the connection."""
+type VendasEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+
+  """The `Venda` at the end of the edge."""
+  node: Venda
+}
+
+"""Methods to use when ordering `Venda`."""
+enum VendasOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  ID_LEGADO_ASC
+  ID_LEGADO_DESC
+  ID_CLIENTE_ASC
+  ID_CLIENTE_DESC
+  ID_USUARIO_ASC
+  ID_USUARIO_DESC
+  ID_TIPO_MOVIMENTO_ASC
+  ID_TIPO_MOVIMENTO_DESC
+  DATA_ASC
+  DATA_DESC
+  CLIENTE_ASC
+  CLIENTE_DESC
+  OBSERVACAO_ASC
+  OBSERVACAO_DESC
+  TOTAL_PRODUTOS_ASC
+  TOTAL_PRODUTOS_DESC
+  DESCONTO_ASC
+  DESCONTO_DESC
+  TOTAL_GERAL_ASC
+  TOTAL_GERAL_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  UPDATED_AT_ASC
+  UPDATED_AT_DESC
+  DELETED_AT_ASC
+  DELETED_AT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}

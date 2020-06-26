@@ -1,0 +1,9 @@
+<label [for]="parentControlName">{{ required ? '* ' : ''}}{{ label }}</label>
+<p-multiSelect
+  [defaultLabel]="selectionLabel"
+  [options]="options"
+  [formControl]="form.get(parentControlName)"
+  [id]="parentControlName"
+  [selectedItemsLabel]="selectedItemsLabel"
+  (onChange)="onChange($event)">
+</p-multiSelect>
